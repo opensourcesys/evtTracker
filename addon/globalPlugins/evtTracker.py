@@ -37,7 +37,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			info.append(f"class name: {element.cachedClassName}")
 			log.debug(u"EvtTracker: UIA {debuginfo}".format(debuginfo=", ".join(info)))
 
-	# Focus announcement hacks.
 	def event_gainFocus(self, obj, nextHandler):
 		self.evtDebugLogging(obj, "gainFocus")
 		nextHandler()
@@ -56,6 +55,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def event_stateChange(self, obj, nextHandler):
 		self.evtDebugLogging(obj, "stateChange")
+		nextHandler()
+
+	def event_descriptionChange(self, obj, nextHandler):
+		self.evtDebugLogging(obj, "descriptionChange")
 		nextHandler()
 
 	def event_UIA_controllerFor(self, obj, nextHandler):
