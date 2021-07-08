@@ -6,12 +6,14 @@ from NVDAObjects.UIA import UIA
 import globalVars
 from logHandler import log
 
+
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self):
 		super(GlobalPlugin, self).__init__()
 		# Do not activate this from secure screens.
-		if globalVars.appArgs.secure: return
+		if globalVars.appArgs.secure:
+			return
 
 	# Record info about events and objects.
 	def evtDebugLogging(self, obj, event=None):
