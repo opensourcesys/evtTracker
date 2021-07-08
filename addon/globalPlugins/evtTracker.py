@@ -34,24 +34,24 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	# Record info about events and objects.
 	def evtDebugLogging(self, obj, event=None):
+		info = [f"object: {repr(obj)}"]
+		info.append(f"name: {obj.name}")
+		if not event:
+			event = "no event specified"
+		info.append(f"event: {event}")
+		if event == "valueChange":
+			info.append(f"value: {obj.value}")
+		elif event == "stateChange":
+			# Parts copied from NVDA Core's default navigator object dev info's state retriever (credit: NV Access).
+			try:
+				ret = ", ".join(
+					stateConsts.get(state) or str(state)
+					for state in obj.states)
+			except Exception as e:
+				ret = "exception: %s" % e
+			info.append(f"states: {ret}")
+		info.append(f"app module: {obj.appModule}")
 		if isinstance(obj, UIA):
-			info = [f"object: {repr(obj)}"]
-			info.append(f"name: {obj.name}")
-			if not event:
-				event = "no event specified"
-			info.append(f"event: {event}")
-			if event == "valueChange":
-				info.append(f"value: {obj.value}")
-			elif event == "stateChange":
-				# Parts copied from NVDA Core's default navigator object dev info's state retriever (credit: NV Access).
-				try:
-					ret = ", ".join(
-						stateConsts.get(state) or str(state)
-						for state in obj.states)
-				except Exception as e:
-					ret = "exception: %s" % e
-				info.append(f"states: {ret}")
-			info.append(f"app module: {obj.appModule}")
 			element = obj.UIAElement
 			# Sometimes due to timing errors, COM error is thrown
 			# when trying to obtain Automation Id from the underlying UIA element.
