@@ -4,9 +4,10 @@
 from comtypes import COMError
 import globalPluginHandler
 import controlTypes
-from NVDAObjects.UIA import UIA
 import globalVars
 from logHandler import log
+from NVDAObjects.IAccessible import IAccessible
+from NVDAObjects.UIA import UIA
 
 
 # Object states constants for use when tracking events.
@@ -51,18 +52,28 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				ret = "exception: %s" % e
 			info.append(f"states: {ret}")
 		info.append(f"app module: {obj.appModule}")
-		if isinstance(obj, UIA):
+		if isinstance(obj, IAccessible):
+			# Bulk comes from dev info for IAccessible object (credit: NV Access).
+			IAccessibleObject = obj.IAccessibleObject
+			childID = obj.IAccessibleChildID
+			try:
+				ret = obj._formatLongDevInfoString(IAccessibleObject.accName(childID))
+			except Exception as e:
+				ret = "exception: %s" % e
+			info.append("IAccessible accName: %s" % ret)
+			info.append("IAccessibleChildID: %r" % childID)
+		elif isinstance(obj, UIA):
 			element = obj.UIAElement
 			# Sometimes due to timing errors, COM error is thrown
 			# when trying to obtain Automation Id from the underlying UIA element.
 			# To keep an eye on this, use cached Automation Id
 			# rather than fetching UIAAutomationId property directly.
 			try:
-				info.append(f"Automation Id: {element.cachedAutomationId}")
+				info.append(f"UIA Automation Id: {element.cachedAutomationId}")
 			except COMError:
-				info.append("Automation Id: not found")
+				info.append("UIA Automation Id: not found")
 			info.append(f"class name: {element.cachedClassName}")
-			log.debug(u"EvtTracker: UIA {debuginfo}".format(debuginfo=", ".join(info)))
+		log.debug(u"EvtTracker: {debuginfo}".format(debuginfo=", ".join(info)))
 
 	# Record object properties when events are fired.
 	# General dev info for base object, followed by API specific ones such as UIA properties.
