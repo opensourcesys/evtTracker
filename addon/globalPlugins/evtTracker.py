@@ -63,6 +63,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			info.append(f"class name: {element.cachedClassName}")
 			log.debug(u"EvtTracker: UIA {debuginfo}".format(debuginfo=", ".join(info)))
 
+	# Record object properties when events are fired.
+	# General dev info for base object, followed by API specific ones such as UIA properties.
+
 	def event_gainFocus(self, obj, nextHandler):
 		self.evtDebugLogging(obj, "gainFocus")
 		nextHandler()
@@ -104,6 +107,34 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		nextHandler()
 
 	def event_UIA_window_windowOpen(self, obj, nextHandler):
-		# Specifically in order to debug multiple toast announcements.
 		self.evtDebugLogging(obj, "windowOpen")
+		nextHandler()
+
+	def event_UIA_notification(
+			self, obj, nextHandler,
+			notificationKind=None, notificationProcessing=None, displayString=None, activityId=None
+	):
+		# Introduced in Windows 10 1709, to be treated as a notification event.
+		self.evtDebugLogging(obj, "notification")
+		if isinstance(obj, UIA) and log.isEnabledFor(log.DEBUG):
+			log.debug(
+				"EvtTracker: UIA notification: "
+				f"sender: {obj.UIAElement}, "
+				f"notification kind: {notificationKind}, "
+				f"notification processing: {notificationProcessing}, "
+				f"display string: {displayString}, "
+				f"activity Id: {activityId}"
+			)
+		nextHandler()
+
+	def event_UIA_toolTipOpened(self, obj, nextHandler):
+		self.evtDebugLogging(obj, "tooltipOpened")
+		nextHandler()
+
+	def event_UIA_itemStatus(self, obj, nextHandler):
+		self.evtDebugLogging(obj, "itemStatus")
+		nextHandler()
+
+	def event_textChange(self, obj, nextHandler):
+		self.evtDebugLogging(obj, "textChange")
 		nextHandler()
