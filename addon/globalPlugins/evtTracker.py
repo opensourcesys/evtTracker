@@ -1,6 +1,7 @@
 # NVDA Event Tracker/Investigator
 # Copyright 2017-2021 Joseph Lee, released under GPL.
 
+from comtypes import COMError
 import globalPluginHandler
 from NVDAObjects.UIA import UIA
 import globalVars
@@ -18,19 +19,23 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	# Record info about events and objects.
 	def evtDebugLogging(self, obj, event=None):
 		if isinstance(obj, UIA) and globalVars.appArgs.debugLogging:
-			element = obj.UIAElement
-			if not obj.name:
-				obj.name = "unavailable"
-			automationID = element.cachedAutomationID
-			if not automationID: automationID = "unavailable"
-			className = element.cachedClassName
-			if not className: className = "unavailable"
+			info = [f"object: {repr(obj)}"]
+			info.append(f"name: {obj.name}")
 			if not event:
 				event = "no event specified"
-			if event != "controllerFor":
-				log.debug("W10: UIA object name: %s, event: %s, app module: %s, automation Id: %s, class name: %s"%(obj.name, event, obj.appModule, automationID, className))
-			else:
-				log.debug("Event Tracker: UIA object name: %s, event: %s, app module: %s, automation Id: %s, class name: %s, controller for count: %s"%(obj.name, event, obj.appModule, automationID, className, len(obj.controllerFor)))
+			info.append(f"event: {event}")
+			info.append(f"app module: {obj.appModule}")
+			element = obj.UIAElement
+			# Sometimes due to timing errors, COM error is thrown
+			# when trying to obtain Automation Id from the underlying UIA element.
+			# To keep an eye on this, use cached Automation Id
+			# rather than fetching UIAAutomationId property directly.
+			try:
+				info.append(f"Automation Id: {element.cachedAutomationId}")
+			except COMError:
+				info.append("Automation Id: not found")
+			info.append(f"class name: {element.cachedClassName}")
+			log.debug(u"EvtTracker: UIA {debuginfo}".format(debuginfo=", ".join(info)))
 
 	# Focus announcement hacks.
 	def event_gainFocus(self, obj, nextHandler):
