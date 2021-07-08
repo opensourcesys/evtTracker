@@ -10,7 +10,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self):
 		super(GlobalPlugin, self).__init__()
-		# #20: don't even think about proceeding in secure screens (especially add-on updates).
+		# Do not activate this from secure screens.
 		if globalVars.appArgs.secure: return
 
 	# Record info about events and objects.
