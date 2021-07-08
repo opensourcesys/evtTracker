@@ -3,9 +3,24 @@
 
 from comtypes import COMError
 import globalPluginHandler
+import controlTypes
 from NVDAObjects.UIA import UIA
 import globalVars
 from logHandler import log
+
+
+# Object states constants for use when tracking events.
+# Copied from NVDA Core's default navigator object dev info's state retriever (credit: NV Access).
+# State constants in control types were rearranged in control types refactor (enumeration) in NVDA.
+# Support control types refactor (both before (2021.1) and after (2021.2) for a time).
+if hasattr(controlTypes, "State"):
+	stateConsts = dict(
+		(state.value, state.name) for state in controlTypes.State
+	)
+else:
+	stateConsts = dict(
+		(const, name) for name, const in controlTypes.__dict__.items() if name.startswith("STATE_")
+	)
 
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
@@ -24,6 +39,17 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			if not event:
 				event = "no event specified"
 			info.append(f"event: {event}")
+			if event == "valueChange":
+				info.append(f"value: {obj.value}")
+			elif event == "stateChange":
+				# Parts copied from NVDA Core's default navigator object dev info's state retriever (credit: NV Access).
+				try:
+					ret = ", ".join(
+						stateConsts.get(state) or str(state)
+						for state in obj.states)
+				except Exception as e:
+					ret = "exception: %s" % e
+				info.append(f"states: {ret}")
 			info.append(f"app module: {obj.appModule}")
 			element = obj.UIAElement
 			# Sometimes due to timing errors, COM error is thrown
