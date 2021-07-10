@@ -86,6 +86,14 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.evtDebugLogging(obj, "loseFocus")
 		nextHandler()
 
+	def event_focusEntered(self, obj, nextHandler):
+		self.evtDebugLogging(obj, "focusEntered")
+		nextHandler()
+
+	def event_foreground(self, obj, nextHandler):
+		self.evtDebugLogging(obj, "foreground")
+		nextHandler()
+
 	def event_nameChange(self, obj, nextHandler):
 		self.evtDebugLogging(obj, "nameChange")
 		nextHandler()
@@ -103,7 +111,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		nextHandler()
 
 	def event_UIA_controllerFor(self, obj, nextHandler):
-		self.evtDebugLogging(obj, "controllerFor")
+		self.evtDebugLogging(obj, "UIA_controllerFor")
 		nextHandler()
 
 	def event_liveRegionChange(self, obj, nextHandler):
@@ -111,23 +119,23 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		nextHandler()
 
 	def event_UIA_elementSelected(self, obj, nextHandler):
-		self.evtDebugLogging(obj, "elementSelected")
+		self.evtDebugLogging(obj, "UIA_elementSelected")
 		nextHandler()
 
 	def event_UIA_systemAlert(self, obj, nextHandler):
-		self.evtDebugLogging(obj, "systemAlert")
+		self.evtDebugLogging(obj, "UIA_systemAlert")
 		nextHandler()
 
 	def event_UIA_window_windowOpen(self, obj, nextHandler):
-		self.evtDebugLogging(obj, "windowOpen")
+		self.evtDebugLogging(obj, "UIA_window_windowOpen")
 		nextHandler()
 
 	def event_UIA_notification(
 			self, obj, nextHandler,
 			notificationKind=None, notificationProcessing=None, displayString=None, activityId=None
 	):
-		# Introduced in Windows 10 1709, to be treated as a notification event.
-		self.evtDebugLogging(obj, "notification")
+		# Introduced in Windows 10 1709 (Fall Creators Update), to be treated as a notification event.
+		self.evtDebugLogging(obj, "UIA_notification")
 		if isinstance(obj, UIA) and log.isEnabledFor(log.DEBUG):
 			log.debug(
 				"EvtTracker: UIA notification: "
@@ -140,11 +148,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		nextHandler()
 
 	def event_UIA_toolTipOpened(self, obj, nextHandler):
-		self.evtDebugLogging(obj, "tooltipOpened")
+		self.evtDebugLogging(obj, "UIA_toolTipOpened")
 		nextHandler()
 
 	def event_UIA_itemStatus(self, obj, nextHandler):
-		self.evtDebugLogging(obj, "itemStatus")
+		self.evtDebugLogging(obj, "UIA_itemStatus")
 		nextHandler()
 
 	def event_textChange(self, obj, nextHandler):
