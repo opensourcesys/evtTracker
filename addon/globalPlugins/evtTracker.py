@@ -52,6 +52,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				ret = "exception: %s" % e
 			info.append(f"states: {ret}")
 		info.append(f"app module: {obj.appModule}")
+		info.append(f"window class name: {obj.windowClassName}")
 		if isinstance(obj, IAccessible):
 			# Bulk comes from dev info for IAccessible object (credit: NV Access).
 			IAccessibleObject = obj.IAccessibleObject
