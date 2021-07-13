@@ -74,7 +74,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			except COMError:
 				info.append("UIA Automation Id: not found")
 			info.append(f"class name: {element.cachedClassName}")
-		log.debug(u"EvtTracker: {debuginfo}".format(debuginfo=", ".join(info)))
+		log.debug(u"EvtTracker: {debuginfo}".format(debuginfo="\n".join(info)))
 
 	# Record object properties when events are fired.
 	# General dev info for base object, followed by API specific ones such as UIA properties.
