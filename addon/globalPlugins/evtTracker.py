@@ -18,9 +18,15 @@ if hasattr(controlTypes, "State"):
 	stateConsts = dict(
 		(state.value, state.name) for state in controlTypes.State
 	)
+	roleConsts = dict(
+		(role.value, role.name) for role in controlTypes.Role
+	)
 else:
 	stateConsts = dict(
 		(const, name) for name, const in controlTypes.__dict__.items() if name.startswith("STATE_")
+	)
+	roleConsts = dict(
+		(const, name) for name, const in controlTypes.__dict__.items() if name.startswith("ROLE_")
 	)
 
 
@@ -37,6 +43,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def evtDebugLogging(self, obj, event=None):
 		info = [f"object: {repr(obj)}"]
 		info.append(f"name: {obj.name}")
+		# Use a friendly name for role (credit: NV Access).
+		info.append(f"role: {roleConsts[obj.role]}")
 		if not event:
 			event = "no event specified"
 		info.append(f"event: {event}")
