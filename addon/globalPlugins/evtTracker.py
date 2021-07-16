@@ -14,14 +14,14 @@ from NVDAObjects.UIA import UIA
 # Copied from NVDA Core's default navigator object dev info's state retriever (credit: NV Access).
 # State constants in control types were rearranged in control types refactor (enumeration) in NVDA.
 # Support control types refactor (both before (2021.1) and after (2021.2) for a time).
-if hasattr(controlTypes, "State"):
+try:
 	stateConsts = dict(
 		(state.value, state.name) for state in controlTypes.State
 	)
 	roleConsts = dict(
 		(role.value, role.name) for role in controlTypes.Role
 	)
-else:
+except AttributeError:
 	stateConsts = dict(
 		(const, name) for name, const in controlTypes.__dict__.items() if name.startswith("STATE_")
 	)
