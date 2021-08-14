@@ -12,22 +12,12 @@ from NVDAObjects.UIA import UIA
 
 # Object states constants for use when tracking events.
 # Copied from NVDA Core's default navigator object dev info's state retriever (credit: NV Access).
-# State constants in control types were rearranged in control types refactor (enumeration) in NVDA.
-# Support control types refactor (both before (2021.1) and after (2021.2) for a time).
-try:
-	stateConsts = dict(
-		(state.value, state.name) for state in controlTypes.State
-	)
-	roleConsts = dict(
-		(role.value, role.name) for role in controlTypes.Role
-	)
-except AttributeError:
-	stateConsts = dict(
-		(const, name) for name, const in controlTypes.__dict__.items() if name.startswith("STATE_")
-	)
-	roleConsts = dict(
-		(const, name) for name, const in controlTypes.__dict__.items() if name.startswith("ROLE_")
-	)
+stateConsts = dict(
+	(state.value, state.name) for state in controlTypes.State
+)
+roleConsts = dict(
+	(role.value, role.name) for role in controlTypes.Role
+)
 
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
