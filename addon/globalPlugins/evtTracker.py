@@ -157,3 +157,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def event_textChange(self, obj, nextHandler):
 		self.evtDebugLogging(obj, "textChange")
 		nextHandler()
+
+	def event_UIA_layoutInvalidated(self, obj, nextHandler):
+		self.evtDebugLogging(obj, "layoutInvalidated")
+		if log.isEnabledFor(log.DEBUG):
+			log.debug(f"EvtTracker: list item count: {obj.childCount}")
+		nextHandler()
