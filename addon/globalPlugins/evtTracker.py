@@ -34,7 +34,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		info = [f"object: {repr(obj)}"]
 		info.append(f"name: {obj.name}")
 		# Use a friendly name for role (credit: NV Access).
-		info.append(f"role: {roleConsts[obj.role]}")
+		info.append("role: %s" % obj.role)
 		if not event:
 			event = "no event specified"
 		info.append(f"event: {event}")
@@ -43,12 +43,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		elif event == "stateChange":
 			# Parts copied from NVDA Core's default navigator object dev info's state retriever (credit: NV Access).
 			try:
-				ret = ", ".join(
-					stateConsts.get(state) or str(state)
-					for state in obj.states)
+				ret = ", ".join(str(state) for state in obj.states)
 			except Exception as e:
 				ret = "exception: %s" % e
-			info.append(f"states: {ret}")
+			info.append("states: %s" % ret)
 		info.append(f"app module: {obj.appModule}")
 		info.append(f"window class name: {obj.windowClassName}")
 		if isinstance(obj, IAccessible):
