@@ -10,16 +10,6 @@ from NVDAObjects.IAccessible import IAccessible
 from NVDAObjects.UIA import UIA
 
 
-# Object states constants for use when tracking events.
-# Copied from NVDA Core's default navigator object dev info's state retriever (credit: NV Access).
-stateConsts = dict(
-	(state.value, state.name) for state in controlTypes.State
-)
-roleConsts = dict(
-	(role.value, role.name) for role in controlTypes.Role
-)
-
-
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self):
