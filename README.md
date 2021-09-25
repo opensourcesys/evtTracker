@@ -19,7 +19,7 @@ The following events are tracked and recorded:
 
 * Focus manipulation: gain focus, lose focus, focus entered, foreground
 * Changes: name, value, state, description, live region
-* UIA events: element selected, item status, controller for, notification, tooltip open, window open, text change
+* UIA events: controller for, element selected, item status, layout invalidated, notification, text change, tooltip open, window open
 
 For each event, the following information will be recorded:
 
@@ -30,7 +30,7 @@ For each event, the following information will be recorded:
 * Object value or state depending on events
 * App module
 * For IAccessible objects: acc name, child ID
-* For UIA objects: Automation Id, class name, notification properties if recording notification event information
+* For UIA objects: Automation Id, class name, notification properties if recording notification event information, child count for layout invalidated event
 
 ## Version 21.07
 
