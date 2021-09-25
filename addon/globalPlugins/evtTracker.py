@@ -3,7 +3,6 @@
 
 from comtypes import COMError
 import globalPluginHandler
-import controlTypes
 import globalVars
 from logHandler import log
 from NVDAObjects.IAccessible import IAccessible
