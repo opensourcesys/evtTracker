@@ -9,6 +9,12 @@ from NVDAObjects.IAccessible import IAccessible
 from NVDAObjects.UIA import UIA
 
 
+# Security: disable the global plugin altogether in secure mode.
+def disableInSecureMode(cls):
+	return globalPluginHandler.GlobalPlugin if globalVars.appArgs.secure else cls
+
+
+@disableInSecureMode
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self):
