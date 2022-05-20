@@ -1,5 +1,5 @@
 # NVDA Event Tracker/Investigator
-# Copyright 2017-2021 Joseph Lee, released under GPL.
+# Copyright 2017-2022 Joseph Lee, released under GPL.
 
 from comtypes import COMError
 import globalPluginHandler
