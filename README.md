@@ -32,6 +32,10 @@ For each event, the following information will be recorded:
 * For IAccessible objects: acc name, child ID
 * For UIA objects: Automation Id, class name, notification properties if recording notification event information, child count for layout invalidated event
 
+## Version 22.06
+
+* NVDA 2021.3 or later is required due to security.
+
 ## Version 21.10
 
 * NVDA 2021.2 or later is required due to changes to NVDA that affects this add-on.
