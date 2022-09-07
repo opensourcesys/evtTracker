@@ -43,7 +43,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				ret = "exception: %s" % e
 			info.append("states: %s" % ret)
 		info.append(f"app module: {obj.appModule}")
-		info.append(f"window class name: {obj.windowClassName}")
+		# Some objects do not define window class name such as secure desktop object.
+		try:
+			ret = obj.windowClassName
+		except Exception as e:
+			ret = "exception: %s" % e
+		info.append("window class name: %s" % ret)
 		if isinstance(obj, IAccessible):
 			# Bulk comes from dev info for IAccessible object (credit: NV Access).
 			IAccessibleObject = obj.IAccessibleObject
