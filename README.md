@@ -2,7 +2,7 @@
 
 * Author: Joseph Lee
 * Download [stable version][1]
-* NVDA compatibility: 2021.3 and later
+* NVDA compatibility: 2022.2 and later
 
 This add-on outputs information about objects for which events were fired. Properties recorded in debug log mode include object type, name, role, event, app module, and accessibility API specific information such as accName for IAccessible object and Automation Id for UIA objects.
 
@@ -31,6 +31,11 @@ For each event, the following information will be recorded:
 * App module
 * For IAccessible objects: acc name, child ID
 * For UIA objects: Automation Id, class name, notification properties if recording notification event information, child count for layout invalidated event
+
+## Version 22.09
+
+* NVDA 2022.2 or later is required due to security.
+* NVDA will no longer play error tones or appear to do nothing if an object does not define a window class name.
 
 ## Version 22.06
 
