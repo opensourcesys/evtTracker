@@ -150,6 +150,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def event_UIA_itemStatus(self, obj, nextHandler):
 		self.evtDebugLogging(obj, "UIA_itemStatus")
+		if log.isEnabledFor(log.DEBUG):
+			log.debug(f"EvtTracker: item status: {obj.UIAElement.currentItemStatus}")
 		nextHandler()
 
 	def event_textChange(self, obj, nextHandler):
