@@ -163,3 +163,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if log.isEnabledFor(log.DEBUG):
 			log.debug(f"EvtTracker: list item count: {obj.childCount}")
 		nextHandler()
+
+	def event_UIA_dragDropEffect(self, obj, nextHandler):
+		self.evtDebugLogging(obj, "dragDropEffect")
+		if log.isEnabledFor(log.DEBUG):
+			dragDropEffect = obj._getUIACacheablePropertyValue(UIAHandler.UIA_DragDropEffectPropertyId)
+			log.debug(f"EvtTracker: drag drop effect: {dragDropEffect}")
+		nextHandler()
