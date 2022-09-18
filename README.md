@@ -19,7 +19,7 @@ The following events are tracked and recorded:
 
 * Focus manipulation: gain focus, lose focus, focus entered, foreground
 * Changes: name, value, state, description, live region
-* UIA events: controller for, element selected, item status, layout invalidated, notification, text change, tooltip open, window open
+* UIA events: controller for, drag drop and drop target effects, element selected, item status, layout invalidated, notification, system alert, text change, tooltip open, window open
 
 For each event, the following information will be recorded:
 
@@ -30,11 +30,13 @@ For each event, the following information will be recorded:
 * Object value or state depending on events
 * App module
 * For IAccessible objects: acc name, child ID
-* For UIA objects: Automation Id, class name, notification properties if recording notification event information, child count for layout invalidated event
+* For UIA objects: Automation Id, class name, notification properties if recording notification event information, child count for layout invalidated event, properties for item status, drag drop, and drop target effect if defined
 
-## Version 22.09
+## Version 22.10
 
 * NVDA 2022.2 or later is required due to security.
+* The following UIA property changes are tracked: drag drop effect, drop target effect.
+* UIA item status property text is logged.
 * NVDA will no longer play error tones or appear to do nothing if an object does not define a window class name.
 
 ## Version 22.06
