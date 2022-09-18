@@ -167,15 +167,15 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def event_UIA_dragDropEffect(self, obj, nextHandler):
 		self.evtDebugLogging(obj, "dragDropEffect")
 		if log.isEnabledFor(log.DEBUG):
-			dragDropEffect = obj._getUIACacheablePropertyValue(UIAHandler.UIA_DragDropEffectPropertyId)
+			UIA_DragDropEffectPropertyId = 30139
+			dragDropEffect = obj._getUIACacheablePropertyValue(UIA_DragDropEffectPropertyId)
 			log.debug(f"EvtTracker: drag drop effect: {dragDropEffect}")
 		nextHandler()
 
 	def event_UIA_dropTargetEffect(self, obj, nextHandler):
 		self.evtDebugLogging(obj, "dropTargetEffect")
 		if log.isEnabledFor(log.DEBUG):
-			dropTargetEffect = obj._getUIACacheablePropertyValue(
-				UIAHandler.UIA_DropTargetDropTargetEffectPropertyId
-			)
+			UIA_DropTargetDropTargetEffectPropertyId = 30142
+			dropTargetEffect = obj._getUIACacheablePropertyValue(UIA_DropTargetDropTargetEffectPropertyId)
 			log.debug(f"EvtTracker: drop target effect: {dropTargetEffect}")
 		nextHandler()
