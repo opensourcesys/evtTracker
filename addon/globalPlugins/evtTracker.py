@@ -127,16 +127,14 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			notificationKind=None, notificationProcessing=None, displayString=None, activityId=None
 	):
 		# Introduced in Windows 10 1709 (Fall Creators Update), to be treated as a notification event.
-		self.evtDebugLogging(obj, "UIA_notification")
-		if isinstance(obj, UIA) and log.isEnabledFor(log.DEBUG):
-			log.debug(
-				"EvtTracker: UIA notification: "
-				f"sender: {obj.UIAElement}, "
-				f"notification kind: {notificationKind}, "
-				f"notification processing: {notificationProcessing}, "
-				f"display string: {displayString}, "
-				f"activity Id: {activityId}"
-			)
+		notificationInfo = [
+			f"sender: {obj.UIAElement}",
+			f"notification kind: {notificationKind}",
+			f"notification processing: {notificationProcessing}",
+			f"display string: {displayString}",
+			f"activity Id: {activityId}"
+		]
+		self.evtDebugLogging(obj, "UIA_notification", additionalInfo="\n".join(notificationInfo))
 		nextHandler()
 
 	def event_UIA_toolTipOpened(self, obj, nextHandler):
