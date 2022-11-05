@@ -18,7 +18,7 @@ def disableInSecureMode(cls):
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	# Record info about events and objects.
-	def evtDebugLogging(self, obj, event=None):
+	def evtDebugLogging(self, obj, event=None, additionalInfo=None):
 		info = [f"object: {repr(obj)}"]
 		info.append(f"name: {obj.name}")
 		# Use a friendly name for role (credit: NV Access).
@@ -63,6 +63,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			except COMError:
 				info.append("UIA Automation Id: not found")
 			info.append(f"class name: {element.cachedClassName}")
+		if additionalInfo:
+			info.append(additionalInfo)
 		log.debug(u"EvtTracker: {debuginfo}".format(debuginfo="\n".join(info)))
 
 	# Record object properties when events are fired.
