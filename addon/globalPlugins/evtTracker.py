@@ -17,13 +17,6 @@ def disableInSecureMode(cls):
 @disableInSecureMode
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
-	def __init__(self):
-		super(GlobalPlugin, self).__init__()
-		# Do not activate this from secure screens.
-		# And do not activate the add-on if log level is not debug.
-		if globalVars.appArgs.secure or not log.isEnabledFor(log.DEBUG):
-			return
-
 	# Record info about events and objects.
 	def evtDebugLogging(self, obj, event=None):
 		info = [f"object: {repr(obj)}"]
