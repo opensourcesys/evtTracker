@@ -142,9 +142,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		nextHandler()
 
 	def event_UIA_itemStatus(self, obj, nextHandler):
-		self.evtDebugLogging(obj, "UIA_itemStatus")
-		if log.isEnabledFor(log.DEBUG):
-			log.debug(f"EvtTracker: item status: {obj.UIAElement.currentItemStatus}")
+		self.evtDebugLogging(
+			obj, "UIA_itemStatus",
+			additionalInfo=f"item status: {obj.UIAElement.currentItemStatus}"
+		)
 		nextHandler()
 
 	def event_textChange(self, obj, nextHandler):
@@ -152,9 +153,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		nextHandler()
 
 	def event_UIA_layoutInvalidated(self, obj, nextHandler):
-		self.evtDebugLogging(obj, "layoutInvalidated")
-		if log.isEnabledFor(log.DEBUG):
-			log.debug(f"EvtTracker: list item count: {obj.childCount}")
+		self.evtDebugLogging(
+			obj, "layoutInvalidated",
+			additionalInfo=f"list item count: {obj.childCount}"
+		)
 		nextHandler()
 
 	def event_UIA_dragDropEffect(self, obj, nextHandler):
