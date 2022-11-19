@@ -2,11 +2,16 @@
 # Copyright 2017-2022 Joseph Lee, released under GPL.
 
 from comtypes import COMError
+from collections import deque
+from gui.dpiScalingHelper import DpiScalingHelperMixinWithoutInit
+import gui
 import globalPluginHandler
 import globalVars
 from logHandler import log
 from NVDAObjects.IAccessible import IAccessible
 from NVDAObjects.UIA import UIA
+from scriptHandler import script
+import wx
 
 
 # Security: disable the global plugin altogether in secure mode.
@@ -14,8 +19,18 @@ def disableInSecureMode(cls):
 	return globalPluginHandler.GlobalPlugin if globalVars.appArgs.secure else cls
 
 
+class Event:
+	def __init__(self, type, info):
+		self.type = type
+		self.info = info
+
+
 @disableInSecureMode
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
+
+	def __init__(self, *args, **kw):
+		super().__init__(*args, **kw)
+		self.eventHistory = deque([], 100)
 
 	# Record info about events and objects.
 	def evtDebugLogging(self, obj, event=None):
@@ -63,7 +78,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			except COMError:
 				info.append("UIA Automation Id: not found")
 			info.append(f"class name: {element.cachedClassName}")
+
 		log.debug(u"EvtTracker: {debuginfo}".format(debuginfo="\n".join(info)))
+		self.eventHistory.append(Event(event, info))
 
 	# Record object properties when events are fired.
 	# General dev info for base object, followed by API specific ones such as UIA properties.
@@ -172,3 +189,70 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			dropTargetEffect = obj._getUIACacheablePropertyValue(UIA_DropTargetDropTargetEffectPropertyId)
 			log.debug(f"EvtTracker: drop target effect: {dropTargetEffect}")
 		nextHandler()
+
+	@script(
+		description="Display the list of processed events",
+		gesture="kb:NVDA+control+e"
+	)
+	def script_displayEventsList(self, gesture):
+		# We need this to be a modal dialog, but it mustn't block this script.
+		def run():
+			gui.mainFrame.prePopup()
+			d = EventsListDialog(self.eventHistory)
+			d.ShowModal()
+			d.Destroy()
+			gui.mainFrame.postPopup()
+		wx.CallAfter(run)
+
+
+class EventsListDialog(
+	DpiScalingHelperMixinWithoutInit,
+	wx.Dialog
+):
+	# Most code copied from  events list dialog
+	def __init__(self, eventHistory):
+		super().__init__(
+			parent=gui.mainFrame,
+			title="Events List"
+		)
+
+		self.eventHistory = eventHistory
+
+		mainSizer = wx.BoxSizer(wx.VERTICAL)
+		contentsSizer = wx.BoxSizer(wx.VERTICAL)
+		self.list = wx.ListBox(
+			self,
+			size=self.scaleSize((500, 300)),  # height is chosen to ensure the dialog will fit on an 800x600 screen,
+			style=wx.LB_SINGLE
+		)
+		self.list.Bind(wx.EVT_LISTBOX, self.onListItemSelected)
+		contentsSizer.Add(self.list, flag=wx.EXPAND)
+		contentsSizer.AddSpacer(gui.guiHelper.SPACE_BETWEEN_VERTICAL_DIALOG_ITEMS)
+		self.description = gui.guiHelper.LabeledControlHelper(self,
+			"Event &description",
+			wx.TextCtrl,
+			style=wx.TE_MULTILINE | wx.TE_READONLY | wx.TE_DONTWRAP
+		)
+		contentsSizer.Add(self.description.sizer)
+
+		mainSizer.Add(contentsSizer, border=gui.guiHelper.BORDER_FOR_DIALOGS, flag=wx.ALL)
+		mainSizer.Fit(self)
+		self.SetSizer(mainSizer)
+		self.CentreOnScreen()
+		self._createEventsList()
+
+	def _createEventsList(self):
+		if self.eventHistory:
+			for event in self.eventHistory:
+				eventType = event.type
+				# Copy event info removing the event object and type for readability
+				eventInfo = ";\n".join([event.info[1], event.info[2]] + event.info[4:])
+				self.list.Append(f"{eventType}; {eventInfo}")
+			self.list.SetSelection(0)
+
+	def onListItemSelected(self, event):
+		index=event.GetSelection()
+		nvdaEvent = self.eventHistory[index] if index >= 0 else None
+
+		if nvdaEvent:
+			self.description.control.Value = "\n".join(nvdaEvent.info)
