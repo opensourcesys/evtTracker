@@ -79,10 +79,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			except COMError:
 				info.append("UIA Automation Id: not found")
 			info.append(f"class name: {element.cachedClassName}")
-
 		if additionalInfo:
 			info.append(additionalInfo)
-
 		log.debug(u"EvtTracker: {debuginfo}".format(debuginfo="\n".join(info)))
 		self.eventHistory.append(Event(event, info))
 
