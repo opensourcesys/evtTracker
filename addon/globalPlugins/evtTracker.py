@@ -196,8 +196,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		nextHandler()
 
 	@script(
-		description="Display the list of processed events",
-		gesture="kb:NVDA+control+e"
+		description="Shows the list of processed events by the Event Tracker addon",
 	)
 	def script_displayEventsList(self, gesture):
 		# We need this to be a modal dialog, but it mustn't block this script.
