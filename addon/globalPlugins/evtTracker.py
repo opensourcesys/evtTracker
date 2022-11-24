@@ -219,9 +219,7 @@ class EventsListDialog(
 			parent=gui.mainFrame,
 			title="Events List"
 		)
-
 		self.eventHistory = eventHistory
-
 		mainSizer = wx.BoxSizer(wx.VERTICAL)
 		contentsSizer = wx.BoxSizer(wx.VERTICAL)
 		self.list = wx.ListBox(
@@ -258,6 +256,5 @@ class EventsListDialog(
 	def onListItemSelected(self, event):
 		index = event.GetSelection()
 		nvdaEvent = self.eventHistory[index] if index >= 0 else None
-
 		if nvdaEvent:
 			self.description.control.Value = "\n".join(nvdaEvent.info)
