@@ -1,6 +1,6 @@
 # Event Tracker
 
-* Author: Joseph Lee
+* Author: Joseph Lee, Thiago Seus
 * Download [stable version][1]
 * NVDA compatibility: 2022.2 and later
 
