@@ -33,7 +33,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.eventHistory = deque([], 100)
 
 	# Record info about events and objects.
-	def evtDebugLogging(self, obj, event=None):
+	def evtDebugLogging(self, obj, event=None, additionalInfo=None):
 		info = [f"object: {repr(obj)}"]
 		info.append(f"name: {obj.name}")
 		# Use a friendly name for role (credit: NV Access).
@@ -78,6 +78,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			except COMError:
 				info.append("UIA Automation Id: not found")
 			info.append(f"class name: {element.cachedClassName}")
+
+		if additionalInfo:
+			info.append(additionalInfo)
 
 		log.debug(u"EvtTracker: {debuginfo}".format(debuginfo="\n".join(info)))
 		self.eventHistory.append(Event(event, info))
@@ -142,16 +145,14 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			notificationKind=None, notificationProcessing=None, displayString=None, activityId=None
 	):
 		# Introduced in Windows 10 1709 (Fall Creators Update), to be treated as a notification event.
-		self.evtDebugLogging(obj, "UIA_notification")
-		if isinstance(obj, UIA) and log.isEnabledFor(log.DEBUG):
-			log.debug(
-				"EvtTracker: UIA notification: "
-				f"sender: {obj.UIAElement}, "
-				f"notification kind: {notificationKind}, "
-				f"notification processing: {notificationProcessing}, "
-				f"display string: {displayString}, "
-				f"activity Id: {activityId}"
-			)
+		notificationInfo = [
+			f"sender: {obj.UIAElement}",
+			f"notification kind: {notificationKind}",
+			f"notification processing: {notificationProcessing}",
+			f"display string: {displayString}",
+			f"activity Id: {activityId}"
+		]
+		self.evtDebugLogging(obj, "UIA_notification", additionalInfo="\n".join(notificationInfo))
 		nextHandler()
 
 	def event_UIA_toolTipOpened(self, obj, nextHandler):
@@ -159,9 +160,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		nextHandler()
 
 	def event_UIA_itemStatus(self, obj, nextHandler):
-		self.evtDebugLogging(obj, "UIA_itemStatus")
-		if log.isEnabledFor(log.DEBUG):
-			log.debug(f"EvtTracker: item status: {obj.UIAElement.currentItemStatus}")
+		self.evtDebugLogging(
+			obj, "UIA_itemStatus",
+			additionalInfo=f"item status: {obj.UIAElement.currentItemStatus}"
+		)
 		nextHandler()
 
 	def event_textChange(self, obj, nextHandler):
@@ -169,25 +171,28 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		nextHandler()
 
 	def event_UIA_layoutInvalidated(self, obj, nextHandler):
-		self.evtDebugLogging(obj, "layoutInvalidated")
-		if log.isEnabledFor(log.DEBUG):
-			log.debug(f"EvtTracker: list item count: {obj.childCount}")
+		self.evtDebugLogging(
+			obj, "layoutInvalidated",
+			additionalInfo=f"list item count: {obj.childCount}"
+		)
 		nextHandler()
 
 	def event_UIA_dragDropEffect(self, obj, nextHandler):
-		self.evtDebugLogging(obj, "dragDropEffect")
-		if log.isEnabledFor(log.DEBUG):
-			UIA_DragDropEffectPropertyId = 30139
-			dragDropEffect = obj._getUIACacheablePropertyValue(UIA_DragDropEffectPropertyId)
-			log.debug(f"EvtTracker: drag drop effect: {dragDropEffect}")
+		UIA_DragDropEffectPropertyId = 30139
+		dragDropEffect = obj._getUIACacheablePropertyValue(UIA_DragDropEffectPropertyId)
+		self.evtDebugLogging(
+			obj, "dragDropEffect",
+			additionalInfo=f"drag drop effect: {dragDropEffect}"
+		)
 		nextHandler()
 
 	def event_UIA_dropTargetEffect(self, obj, nextHandler):
-		self.evtDebugLogging(obj, "dropTargetEffect")
-		if log.isEnabledFor(log.DEBUG):
-			UIA_DropTargetDropTargetEffectPropertyId = 30142
-			dropTargetEffect = obj._getUIACacheablePropertyValue(UIA_DropTargetDropTargetEffectPropertyId)
-			log.debug(f"EvtTracker: drop target effect: {dropTargetEffect}")
+		UIA_DropTargetDropTargetEffectPropertyId = 30142
+		dropTargetEffect = obj._getUIACacheablePropertyValue(UIA_DropTargetDropTargetEffectPropertyId)
+		self.evtDebugLogging(
+			obj, "dropTargetEffect",
+			additionalInfo=f"drop target effect: {dropTargetEffect}"
+		)
 		nextHandler()
 
 	@script(
