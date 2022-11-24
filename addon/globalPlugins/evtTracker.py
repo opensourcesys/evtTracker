@@ -19,7 +19,8 @@ def disableInSecureMode(cls):
 	return globalPluginHandler.GlobalPlugin if globalVars.appArgs.secure else cls
 
 
-class Event:
+class Event(object):
+
 	def __init__(self, type, info):
 		self.type = type
 		self.info = info
@@ -210,8 +211,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 
 class EventsListDialog(
-	DpiScalingHelperMixinWithoutInit,
-	wx.Dialog
+		DpiScalingHelperMixinWithoutInit,
+		wx.Dialog
 ):
 	# Most code copied from  events list dialog
 	def __init__(self, eventHistory):
@@ -232,7 +233,8 @@ class EventsListDialog(
 		self.list.Bind(wx.EVT_LISTBOX, self.onListItemSelected)
 		contentsSizer.Add(self.list, flag=wx.EXPAND)
 		contentsSizer.AddSpacer(gui.guiHelper.SPACE_BETWEEN_VERTICAL_DIALOG_ITEMS)
-		self.description = gui.guiHelper.LabeledControlHelper(self,
+		self.description = gui.guiHelper.LabeledControlHelper(
+			self,
 			"Event &description",
 			wx.TextCtrl,
 			style=wx.TE_MULTILINE | wx.TE_READONLY | wx.TE_DONTWRAP
@@ -255,7 +257,7 @@ class EventsListDialog(
 			self.list.SetSelection(0)
 
 	def onListItemSelected(self, event):
-		index=event.GetSelection()
+		index = event.GetSelection()
 		nvdaEvent = self.eventHistory[index] if index >= 0 else None
 
 		if nvdaEvent:
