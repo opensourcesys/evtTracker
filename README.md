@@ -32,6 +32,8 @@ For each event, the following information will be recorded:
 * For IAccessible objects: acc name, child ID
 * For UIA objects: Automation Id, class name, notification properties if recording notification event information, child count for layout invalidated event, properties for item status, drag drop, and drop target effect if defined
 
+You can also assign a gesture to view the events on a list. The list saves up to 100 latest events processed.
+
 ## Version 22.10
 
 * NVDA 2022.2 or later is required due to security.
