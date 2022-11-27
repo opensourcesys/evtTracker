@@ -195,7 +195,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		nextHandler()
 
 	@script(
-		description="Shows the list of processed events",
+		# Translators: input help message for a command in Event Tracker add-on.
+		description=_("Shows the list of processed events"),
 		category="Event Tracker"
 	)
 	def script_displayEventsList(self, gesture):
@@ -217,7 +218,8 @@ class EventsListDialog(
 	def __init__(self, eventHistory):
 		super().__init__(
 			parent=gui.mainFrame,
-			title="Events List"
+			# Translators: title of a dialog displaying recent events.
+			title=_("Events List")
 		)
 		self.eventHistory = eventHistory
 		mainSizer = wx.BoxSizer(wx.VERTICAL)
@@ -232,7 +234,8 @@ class EventsListDialog(
 		contentsSizer.AddSpacer(gui.guiHelper.SPACE_BETWEEN_VERTICAL_DIALOG_ITEMS)
 		self.description = gui.guiHelper.LabeledControlHelper(
 			self,
-			"Event &description",
+			# Translators: label for a read-only edit field displaying event properties.
+			_("Event &description"),
 			wx.TextCtrl,
 			style=wx.TE_MULTILINE | wx.TE_READONLY | wx.TE_DONTWRAP
 		)
