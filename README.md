@@ -34,6 +34,11 @@ For each event, the following information will be recorded:
 
 You can also assign a gesture to view the events on a list (NVDA menu/Preferences/Input gestures, Event Tracker category). The list saves up to 100 latest events processed.
 
+## Version 23.01
+
+* NVDA 2022.3 or later is required.
+* Windows 10 or later is required as Windows 7, 8, and 8.1 are no longer supported by Microsoft as of January 2023.
+
 ## Version 22.12
 
 * Added events list dialog (command unassigned) to list up to 100 recent events recorded by the add-on (Thiago Seus).
