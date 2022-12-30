@@ -1,5 +1,5 @@
 # NVDA Event Tracker/Investigator
-# Copyright 2017-2022 Joseph Lee, Thiago Seus, released under GPL.
+# Copyright 2017-2023 Joseph Lee, Thiago Seus, released under GPL.
 
 from comtypes import COMError
 from collections import deque
