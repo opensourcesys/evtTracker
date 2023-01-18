@@ -19,6 +19,7 @@ The following events are tracked and recorded:
 
 * Focus manipulation: gain focus, lose focus, focus entered, foreground
 * Changes: name, value, state, description, live region
+* Other events: alert
 * UIA events: controller for, drag drop and drop target effects, element selected, item status, layout invalidated, notification, system alert, text change, tooltip open, window open
 
 For each event, the following information will be recorded:
@@ -38,6 +39,7 @@ You can also assign a gesture to view the events on a list (NVDA menu/Preference
 
 * NVDA 2022.4 or later is required.
 * Windows 10 21H2 (November 2021 Update/build 19044) or later is required.
+* Alert event (mostly for IAccessible objects) will be tracked.
 
 ## Version 23.01
 
