@@ -194,6 +194,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		)
 		nextHandler()
 
+	def event_alert(self, obj, nextHandler):
+		self.evtDebugLogging(obj, "alert")
+		nextHandler()
+
 	@script(
 		# Translators: input help message for a command in Event Tracker add-on.
 		description=_("Shows the list of processed events"),
