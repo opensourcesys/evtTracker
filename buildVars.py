@@ -25,7 +25,7 @@ addon_info = {
 	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 	"addon_description": _("""Tracks events and displays information about them"""),
 	# version
-	"addon_version": "23.01",
+	"addon_version": "23.02",
 	# Author(s)
 	"addon_author": "Joseph Lee <joseph.lee22590@gmail.com>, Thiago Seus <thiago.seus@yahoo.com.br>",
 	# URL for the add-on documentation support
