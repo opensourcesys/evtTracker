@@ -218,7 +218,6 @@ class EventsListDialog(
 		DpiScalingHelperMixinWithoutInit,
 		wx.Dialog
 ):
-	# Most code copied from  events list dialog
 	def __init__(self, eventHistory):
 		super().__init__(
 			parent=gui.mainFrame,
