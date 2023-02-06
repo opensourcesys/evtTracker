@@ -23,7 +23,7 @@ def disableInSecureMode(cls):
 
 class Event(object):
 
-	def __init__(self, type, info):
+	def __init__(self, type: str, info: str) -> None:
 		self.type = type
 		self.info = info
 
