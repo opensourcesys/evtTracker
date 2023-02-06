@@ -3,6 +3,7 @@
 
 from comtypes import COMError
 from collections import deque
+from typing import Optional, List
 from gui.dpiScalingHelper import DpiScalingHelperMixinWithoutInit
 import gui
 import globalPluginHandler
@@ -10,6 +11,7 @@ import globalVars
 from logHandler import log
 from NVDAObjects.IAccessible import IAccessible
 from NVDAObjects.UIA import UIA
+import NVDAObjects
 from scriptHandler import script
 import wx
 
@@ -34,8 +36,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.eventHistory = deque([], 100)
 
 	# Record info about events and objects.
-	def evtDebugLogging(self, obj, event=None, additionalInfo=None):
-		info = [f"object: {repr(obj)}"]
+	def evtDebugLogging(
+			self,
+			obj: NVDAObjects.NVDAObject,
+			event: Optional[str] = None,
+			additionalInfo: Optional[str] = None
+	) -> None:
+		info: List[str] = [f"object: {repr(obj)}"]
 		info.append(f"name: {obj.name}")
 		# Use a friendly name for role (credit: NV Access).
 		info.append("role: %s" % obj.role)
