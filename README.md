@@ -72,4 +72,4 @@ You can also assign a gesture to view the events on a list (NVDA menu/Preference
 
 * Initial release.
 
-[1]: https://addons.nvda-project.org/files/get.php?file=evttracker
+[1]: https://addons.nvda-project.org/files/get.php?file=evtTracker
