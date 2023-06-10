@@ -289,6 +289,9 @@ for dir in langDirs:
 	)
 	env.Depends(translatedManifest, ["buildVars.py"])
 	env.Depends(addon, [translatedManifest, moFile])
+else:  # Provide defaults for variables which didn't get assigned in above loop
+	poFile = None
+	moFile = None
 
 pythonFiles = expandGlobs(buildVars.pythonSources)
 for file in pythonFiles:
@@ -299,7 +302,7 @@ for file in pythonFiles:
 createAddonHelp("addon")
 for mdFile in env.Glob(os.path.join('addon', 'doc', '*', '*.md')):
 	htmlFile = env.markdown(mdFile)
-	env.Depends(htmlFile, [mdFile, moFile or None])
+	env.Depends(htmlFile, [mdFile, moFile])
 	env.Depends(addon, htmlFile)
 
 # Pot target
