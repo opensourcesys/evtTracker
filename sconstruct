@@ -297,8 +297,6 @@ for file in pythonFiles:
 # Convert markdown files to html
 # We need at least doc in English and should enable the Help button for the add-on in Add-ons Manager
 createAddonHelp("addon")
-try:
-	
 for mdFile in env.Glob(os.path.join('addon', 'doc', '*', '*.md')):
 	htmlFile = env.markdown(mdFile)
 	try:  # It is possible that no moFile was set, because an add-on has no translations.
