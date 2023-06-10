@@ -1,9 +1,11 @@
 # NVDA Event Tracker/Investigator
-# Copyright 2017-2023 Joseph Lee, Thiago Seus, released under GPL.
+# Copyright 2017-2023 Joseph Lee, Thiago Seus, 2023 Luke Davis and Open Source Systems, Ltd., all rights reserved.
+# Released under GPL V2.
 
 from comtypes import COMError
 from collections import deque
 from typing import Optional, List
+
 from gui.dpiScalingHelper import DpiScalingHelperMixinWithoutInit
 import gui
 import globalPluginHandler
