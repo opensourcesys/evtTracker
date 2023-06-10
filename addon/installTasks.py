@@ -1,5 +1,5 @@
 # evtTracker/installTasks.py
-# Copyright 2022-2023 Joseph Lee, released under GPL.
+# Copyright 2022-2023 Joseph Lee, Luke Davis, released under GPL V2.
 
 # Provides needed routines during add-on installation and removal.
 # Mostly checks compatibility.
@@ -37,4 +37,4 @@ def onInstall():
 					supportedBuild=minimumWinVer.build
 				), unsupportedWindowsReleaseTitle, wx.OK | wx.ICON_ERROR
 			)
-		raise RuntimeError("Attempting to install Event Tracker on Windows releases earlier than 10")
+		raise RuntimeError("Attempting to install Event Tracker on Windows releases earlier than 10 22H2")
