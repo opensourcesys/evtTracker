@@ -123,10 +123,13 @@ jobs:
           # Setup
           from selenium import webdriver
           from selenium.webdriver.common.by import By
+          from selenium.webdriver.common.keys import Keys
           from selenium.webdriver.chrome.service import Service
           from webdriver_manager.chrome import ChromeDriverManager
-          from selenium.webdriver.support.ui import Select
+          from selenium.webdriver.support.expected_conditions import title_contains
+          from selenium.webdriver.support.ui import Select, WebDriverWait
           from urllib.parse import quote
+          from time import sleep
           repoBase = f"https://github.com/{environ['GITHUB_REPOSITORY']}"
           releaseURL = environ["release_asset_url"]
           # Sanity checks
@@ -145,13 +148,20 @@ jobs:
           )
           # Starts on the login form. Get and fill it.
           loginField = browser.find_element(By.ID, "login_field")
+          loginField.clear()
           loginField.send_keys(environ["gh_user_secret"])
           passwordField = browser.find_element(By.ID, "password")
+          passwordField.clear()
           passwordField.send_keys(environ["gh_password_secret"])
           print("Attempting login.")
-          loginButton = browser.find_element(By.XPATH, value="//input[@data-signin-label='Sign in']").click()
+          sleep(1)
+          passwordField.send_keys(Keys.RETURN)
+          print(f'Result of title_contains was: {title_contains("Issue", browser)}.')
+          #loginButton = browser.find_element(By.XPATH, value="//input[@data-signin-label='Sign in']").click()
           # Check success
           print(f"Title of page after login was: {browser.title}")
+          print("Body of page was:")
+          print(browser.body)
           assert browser.title.lower().startswith("new issue")
           # Fill the issue form
           downloadField = browser.find_element(By.ID, "issue_form_download-url")
