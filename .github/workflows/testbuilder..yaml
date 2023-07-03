@@ -147,7 +147,7 @@ jobs:
           loginField = browser.find_element(By.ID, "login_field")
           loginField.send_keys(environ["gh_user_secret"])
           passwordField = browser.find_element(By.ID, "password")
-          passwordfield.send_keys(environ["gh_password_secret"])
+          passwordField.send_keys(environ["gh_password_secret"])
           print("Attempting login.")
           loginButton = browser.find_element(By.XPATH, value="//input[@data-signin-label='Sign in']").click()
           # Check success
