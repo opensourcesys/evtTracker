@@ -126,7 +126,6 @@ jobs:
           from selenium.webdriver.common.keys import Keys
           from selenium.webdriver.chrome.service import Service
           from webdriver_manager.chrome import ChromeDriverManager
-          from selenium.webdriver.support.expected_conditions import title_contains
           from selenium.webdriver.support.ui import Select, WebDriverWait
           from urllib.parse import quote
           from time import sleep
@@ -156,7 +155,7 @@ jobs:
           print("Attempting login.")
           sleep(1)
           passwordField.send_keys(Keys.RETURN)
-          print(f'Result of title_contains was: {title_contains("Issue", browser)}.')
+sleep(10)
           #loginButton = browser.find_element(By.XPATH, value="//input[@data-signin-label='Sign in']").click()
           # Check success
           print(f"Title of page after login was: {browser.title}")
