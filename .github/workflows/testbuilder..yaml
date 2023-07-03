@@ -24,7 +24,11 @@ jobs:
           python-version: 3.9
           cache: 'pip'
       - name: Install dependencies
+        shell: bash
         run: |
+          if [[ ! -s requirements.txt ]]; then
+          echo -e "pre-commit\nscons\nmarkdown">requirements.txt
+          fi
           python -m pip install --upgrade pip wheel
           pip install -r requirements.txt
           sudo apt-get update  -y
