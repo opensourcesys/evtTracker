@@ -90,7 +90,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			info.append(f"class name: {element.cachedClassName}")
 		if additionalInfo:
 			info.append(additionalInfo)
-		log.debug(u"EvtTracker: {debuginfo}".format(debuginfo="\n".join(info)))
+		log.debug("EvtTracker: {debuginfo}".format(debuginfo="\n".join(info)))
 		self.eventHistory.append(Event(event, info))
 
 	# Record object properties when events are fired.
