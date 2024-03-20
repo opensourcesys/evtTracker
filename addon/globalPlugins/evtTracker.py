@@ -251,7 +251,7 @@ class EventsListDialog(
 			wx.TextCtrl,
 			style=wx.TE_MULTILINE | wx.TE_READONLY | wx.TE_DONTWRAP
 		)
-		contentsSizer.Add(self.description.sizer)
+		contentsSizer.Add(self.description.sizer, proportion=1)
 
 		mainSizer.Add(contentsSizer, border=gui.guiHelper.BORDER_FOR_DIALOGS, flag=wx.ALL)
 		mainSizer.Fit(self)
