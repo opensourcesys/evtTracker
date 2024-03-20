@@ -25,7 +25,7 @@ addon_info = {
 	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 	"addon_description": _("""Tracks events and displays information about them"""),
 	# version
-	"addon_version": "24.1.0",
+	"addon_version": "24.1.100",
 	# Author(s)
 	"addon_author": "Joseph Lee <joseph.lee22590@gmail.com>, Luke Davis <XLTechie@newanswertech.com>, Thiago Seus <thiago.seus@yahoo.com.br>",
 	# URL for the add-on documentation support
@@ -41,7 +41,7 @@ addon_info = {
 	# Add-on update channel (default is None, denoting stable releases,
 	# and for development releases, use "dev".)
 	# Do not change unless you know what you are doing!
-	"addon_updateChannel": None,
+	"addon_updateChannel": "beta",
 	# Add-on license such as GPL 2
 	"addon_license": "GPL v2",
 	# URL for the license document the ad-on is licensed under
