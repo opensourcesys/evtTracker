@@ -35,6 +35,13 @@ For each event, the following information will be recorded:
 
 You can also assign a gesture to view the events on a list (NVDA menu/Preferences/Input gestures, Event Tracker category). The list saves up to 100 latest events processed.
 
+If you find this add-on useful, please [review it][2] in the NVDA Add-on Store.
+
+## Version 24.1.0
+
+* NVDA 2024.1 compatibility.
+* opensourcesys/evtTracker #4: the first event's description no longer missing when first opening the event viewer. Contributed by: WangFeng Huang (hwf1324)
+
 ## Version 23.02
 
 * NVDA 2022.4 or later is required.
@@ -72,4 +79,5 @@ You can also assign a gesture to view the events on a list (NVDA menu/Preference
 
 * Initial release.
 
-[1]: https://addons.nvda-project.org/files/get.php?file=evtTracker
+[1]: https://www.nvaccess.org/addonStore/legacy?file=evtTracker
+[2]: https://github.com/nvaccess/addon-datastore/discussions/2717
