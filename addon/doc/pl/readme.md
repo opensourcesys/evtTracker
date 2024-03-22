@@ -1,6 +1,7 @@
 # Event Tracker #
+# Event Tracker
 
-* Autor: Joseph Lee, Thiago Seus, Luke Davis
+* Author: Joseph Lee, Thiago Seus
 * Pobierz [wersja stabilna][1]
 * Zgodność z NVDA: 2022.4 i nowsze
 
@@ -56,6 +57,13 @@ Możesz także przypisać gest do wyświetlania zdarzeń na liście (menu NVDA /
 preferencje / gesty wprowadzania, kategoria Śledzenie zdarzeń). Lista
 zapisuje do 100 ostatnio przetworzonych zdarzeń.
 
+If you find this add-on useful, please [review it][2] in the NVDA Add-on
+Store.
+
+## Version 24.1.0
+
+* NVDA 2024.1 compatibility.
+
 ## Wersja 23.02
 
 * Wymagana jest NVDA 2022.4 lub nowsza.
@@ -103,4 +111,5 @@ zapisuje do 100 ostatnio przetworzonych zdarzeń.
 
 [[!tag dev stable]]
 
-[1]: https://www.nvaccess.org/addonStore/legacy?file=evtTracker
+[1]: https://www.nvaccess.org/addonStore/legacy?file=evtTracker [2]:
+https://github.com/nvaccess/addon-datastore/discussions/2717

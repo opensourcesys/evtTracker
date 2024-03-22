@@ -1,6 +1,7 @@
 # Olay İzleyici #
+# Olay İzleyici
 
-* Yazar: Joseph Lee, Thiago Seus, Luke Davis
+* Yazarlar: Joseph Lee, Thiago Seus
 * [Kararlı sürümü indir][1]
 * NVDA uyumluluğu: 2022.4 ve sonrası
 
@@ -51,6 +52,13 @@ Ayrıca olayları bir listede görüntülemek için bir hareket atayabilirsiniz
 (NVDA menüsü/Tercihler/Girdi hareketleri, Olay İzleyici kategorisi). Liste,
 işlenen en son 100 olayı kaydeder.
 
+Bu eklentiyi yararlı buluyorsanız, lütfen NVDA Eklenti Mağazasında
+[inceleyin][2].
+
+## Sürüm 24.1.0
+
+* NVDA uyumluluğu: 2024.1 ve sonrası.
+
 ## Sürüm 23.02
 
 * NVDA 2022.4 veya üstü gereklidir.
@@ -98,4 +106,5 @@ işlenen en son 100 olayı kaydeder.
 
 [[!tag dev stable]]
 
-[1]: https://www.nvaccess.org/addonStore/legacy?file=evtTracker
+[1]: https://www.nvaccess.org/addonStore/legacy?file=evtTracker [2]:
+https://github.com/nvaccess/addon-datastore/discussions/2717

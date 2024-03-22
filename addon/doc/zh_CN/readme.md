@@ -1,6 +1,7 @@
 # 事件跟踪器 #
+# Event Tracker
 
-* 作者： Joseph Lee, Thiago Seus, Luke Davis
+* Author: Joseph Lee, Thiago Seus
 * 下载 [稳定版][1]
 * NVDA 兼容性：2022.4 及更高版本
 
@@ -37,6 +38,13 @@ IAccessible 对象的 accName 和 UIA 对象的自动化 Id。
   Id、类名、通知属性（如果记录通知事件信息）、布局无效事件的子对象数量、项目状态的属性、拖拽和放置（如果已定义）
 
 您还可以指定一个手势以在列表中查看事件（NVDA 菜单选项/按键与手势，事件跟踪器类别）。该列表最多保存 100 个已处理的最新事件。
+
+If you find this add-on useful, please [review it][2] in the NVDA Add-on
+Store.
+
+## Version 24.1.0
+
+* NVDA 2024.1 compatibility.
 
 ## 版本 23.02
 
@@ -77,4 +85,5 @@ IAccessible 对象的 accName 和 UIA 对象的自动化 Id。
 
 [[!tag dev stable]]
 
-[1]: https://www.nvaccess.org/addonStore/legacy?file=evtTracker
+[1]: https://www.nvaccess.org/addonStore/legacy?file=evtTracker [2]:
+https://github.com/nvaccess/addon-datastore/discussions/2717

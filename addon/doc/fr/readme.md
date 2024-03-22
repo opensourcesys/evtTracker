@@ -1,6 +1,7 @@
 # Event Tracker #
+# Event Tracker
 
-* Auteur : Joseph Lee, Thiago Seus, Luke Davis
+* Author: Joseph Lee, Thiago Seus
 * Télécharger [version stable][1]
 * Compatibility NVDA : 2022.4 et supérieure
 
@@ -58,6 +59,13 @@ Vous pouvez également assigner un geste pour afficher les événements d'une
 liste (menu NVDA / Préférences / Gestes de commandes, catégorie  Event
 Tracker). la liste sauvegarde jusqu'à 100 derniers événements traités.
 
+If you find this add-on useful, please [review it][2] in the NVDA Add-on
+Store.
+
+## Version 24.1.0
+
+* NVDA 2024.1 compatibility.
+
 ## Version 23.02
 
 * NVDA 2022.4 ou version ultérieure est requis.
@@ -109,4 +117,5 @@ Tracker). la liste sauvegarde jusqu'à 100 derniers événements traités.
 
 [[!tag dev stable]]
 
-[1]: https://www.nvaccess.org/addonStore/legacy?file=evtTracker
+[1]: https://www.nvaccess.org/addonStore/legacy?file=evtTracker [2]:
+https://github.com/nvaccess/addon-datastore/discussions/2717
