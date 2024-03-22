@@ -232,14 +232,15 @@ class EventsListDialog(
 		super().__init__(
 			parent=gui.mainFrame,
 			# Translators: title of a dialog displaying recent events.
-			title=_("Events List")
+			title=_("Events List"),
+			size=(536, 428)  # height is chosen to ensure the dialog will fit on an 800x600 screen,
 		)
 		self.eventHistory = eventHistory
 		mainSizer = wx.BoxSizer(wx.VERTICAL)
 		contentsSizer = wx.BoxSizer(wx.VERTICAL)
 		self.list = wx.ListBox(
 			self,
-			size=self.scaleSize((500, 300)),  # height is chosen to ensure the dialog will fit on an 800x600 screen,
+			size=self.scaleSize((500, 200)),
 			style=wx.LB_SINGLE
 		)
 		self.list.Bind(wx.EVT_LISTBOX, self.onListItemSelected)
@@ -253,10 +254,10 @@ class EventsListDialog(
 			style=wx.TE_MULTILINE | wx.TE_READONLY | wx.TE_DONTWRAP
 		)
 		self.description.sizer.GetItem(self.description.control).SetProportion(1)
+		self.description.sizer.GetItem(self.description.control).SetFlag(wx.EXPAND)
 		contentsSizer.Add(self.description.sizer, flag=wx.EXPAND)
 
-		mainSizer.Add(contentsSizer, border=guiHelper.BORDER_FOR_DIALOGS, flag=wx.ALL)
-		mainSizer.Fit(self)
+		mainSizer.Add(contentsSizer, proportion=1, border=guiHelper.BORDER_FOR_DIALOGS, flag=wx.ALL)
 		self.SetSizer(mainSizer)
 		self.CentreOnScreen()
 		self._createEventsList()
