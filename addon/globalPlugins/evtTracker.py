@@ -247,7 +247,7 @@ class EventsListDialog(
 		self.description = gui.guiHelper.LabeledControlHelper(
 			self,
 			# Translators: label for a read-only edit field displaying event properties.
-			_("Event &description"),
+			_("Event\n&description"),
 			wx.TextCtrl,
 			style=wx.TE_MULTILINE | wx.TE_READONLY | wx.TE_DONTWRAP
 		)
