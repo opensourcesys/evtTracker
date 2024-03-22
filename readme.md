@@ -40,7 +40,7 @@ If you find this add-on useful, please [review it][2] in the NVDA Add-on Store.
 ## Version 24.1.0
 
 * NVDA 2024.1 compatibility.
-* Contributed fix opensourcesys/evtTracker #4: the first event's description no longer missing when first opening the event viewer.
+* opensourcesys/evtTracker #4: the first event's description no longer missing when first opening the event viewer. Contributed by: WangFeng Huang (hwf1324)
 
 ## Version 23.02
 
