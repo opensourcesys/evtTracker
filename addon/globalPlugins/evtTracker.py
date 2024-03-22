@@ -7,7 +7,7 @@ from collections import deque
 from typing import Optional, List
 
 from gui.dpiScalingHelper import DpiScalingHelperMixinWithoutInit
-import gui
+import gui.guiHelper
 import globalPluginHandler
 import globalVars
 from logHandler import log
@@ -251,7 +251,8 @@ class EventsListDialog(
 			wx.TextCtrl,
 			style=wx.TE_MULTILINE | wx.TE_READONLY | wx.TE_DONTWRAP
 		)
-		contentsSizer.Add(self.description.sizer)
+		self.description.sizer.GetItem(self.description.control).SetProportion(1)
+		contentsSizer.Add(self.description.sizer, flag=wx.EXPAND)
 
 		mainSizer.Add(contentsSizer, border=gui.guiHelper.BORDER_FOR_DIALOGS, flag=wx.ALL)
 		mainSizer.Fit(self)
