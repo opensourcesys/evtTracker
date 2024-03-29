@@ -109,5 +109,6 @@ Store.
 
 [[!tag dev stable]]
 
-[1]: https://www.nvaccess.org/addonStore/legacy?file=evtTracker [2]:
-https://github.com/nvaccess/addon-datastore/discussions/2717
+[1]: https://www.nvaccess.org/addonStore/legacy?file=evtTracker
+
+[2]: https://github.com/nvaccess/addon-datastore/discussions/2717
