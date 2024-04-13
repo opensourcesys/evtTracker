@@ -1,6 +1,7 @@
 # Rastreador de eventos #
+# Rastreador de eventos
 
-* Autor: Joseph Lee, Thiago Seus, Luke Davis
+* Autores: Joseph Lee, Thiago Seus
 * Descargar [versión estable][1]
 * Compatibilidad con NVDA: de 2022.4 en adelante
 
@@ -57,6 +58,13 @@ También se puede asignar un gesto para visualizar los eventos en una lista
 (menú NVDA / Preferencias / Gestos de entrada, categoría Rastreador de
 eventos). La lista guarda hasta los 100 últimos eventos procesados.
 
+Si encuentras útil este complemento, [reséñalo][2] en la tienda de
+complementos de NVDA.
+
+## Versión 24.1.0
+
+* Compatibilidad con NVDA 2024.1.
+
 ## Versión 23.02
 
 * Se requiere NVDA 2022.4 o posterior.
@@ -108,3 +116,5 @@ eventos). La lista guarda hasta los 100 últimos eventos procesados.
 [[!tag dev stable]]
 
 [1]: https://www.nvaccess.org/addonStore/legacy?file=evtTracker
+
+[2]: https://github.com/nvaccess/addon-datastore/discussions/2717
