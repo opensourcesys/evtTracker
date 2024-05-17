@@ -1,7 +1,7 @@
 # Praćenje događaja (Event Tracker) #
-# Event Tracker
+# Praćenje događaja
 
-* Author: Joseph Lee, Thiago Seus
+* Autor: Joseph Lee, Thiago Seus
 * Preuzmi [stabilnu verziju][1]
 * NVDA kompatibilnost: 2022.4 i novije verzije
 
@@ -58,9 +58,9 @@ do 100 najnovijih obrađenih događaja.
 If you find this add-on useful, please [review it][2] in the NVDA Add-on
 Store.
 
-## Version 24.1.0
+## Verzija 24.10
 
-* NVDA 2024.1 compatibility.
+* Kompatibilnost s NVDA 2024.1.
 
 ## Verzija 23.02
 
