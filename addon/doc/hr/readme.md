@@ -1,6 +1,7 @@
 # Praćenje događaja (Event Tracker) #
+# Praćenje događaja
 
-* Autor: Joseph Lee, Thiago Seus, Luke Davis
+* Autor: Joseph Lee, Thiago Seus
 * Preuzmi [stabilnu verziju][1]
 * NVDA kompatibilnost: 2022.4 i novije verzije
 
@@ -54,6 +55,13 @@ Možeš dodijeliti i gestu za pregled događaja na popisu (NVDA
 izbornik/Postavke/Geste unosa, kategorija „Praćenje događaja”). Popis sprema
 do 100 najnovijih obrađenih događaja.
 
+If you find this add-on useful, please [review it][2] in the NVDA Add-on
+Store.
+
+## Verzija 24.10
+
+* Kompatibilnost s NVDA 2024.1.
+
 ## Verzija 23.02
 
 * Potrebna je NVDA verzija 2022.4 ili novija.
@@ -102,3 +110,5 @@ do 100 najnovijih obrađenih događaja.
 [[!tag dev stable]]
 
 [1]: https://www.nvaccess.org/addonStore/legacy?file=evtTracker
+
+[2]: https://github.com/nvaccess/addon-datastore/discussions/2717

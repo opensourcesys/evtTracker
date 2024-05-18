@@ -267,6 +267,9 @@ class EventsListDialog(
 				eventInfo = ";\n".join([event.info[1], event.info[2]] + event.info[4:])
 				self.list.Append(f"{eventType}; {eventInfo}")
 			self.list.SetSelection(0)
+			event = wx.CommandEvent(wx.EVT_LISTBOX.typeId, self.list.GetId())
+			event.SetEventObject(self.list)
+			self.list.ProcessEvent(event)
 
 	def onListItemSelected(self, event):
 		index = event.GetSelection()
