@@ -5,9 +5,11 @@
 from comtypes import COMError
 from collections import deque
 from typing import Optional, List
+import wx
 
 from gui.dpiScalingHelper import DpiScalingHelperMixinWithoutInit
 import gui
+from gui import guiHelper
 import globalPluginHandler
 import globalVars
 from logHandler import log
@@ -15,7 +17,6 @@ from NVDAObjects.IAccessible import IAccessible
 from NVDAObjects.UIA import UIA
 import NVDAObjects
 from scriptHandler import script
-import wx
 
 
 # Security: disable the global plugin altogether in secure mode.
@@ -231,30 +232,32 @@ class EventsListDialog(
 		super().__init__(
 			parent=gui.mainFrame,
 			# Translators: title of a dialog displaying recent events.
-			title=_("Events List")
+			title=_("Events List"),
+			size=(536, 428)  # height is chosen to ensure the dialog will fit on an 800x600 screen,
 		)
 		self.eventHistory = eventHistory
 		mainSizer = wx.BoxSizer(wx.VERTICAL)
 		contentsSizer = wx.BoxSizer(wx.VERTICAL)
 		self.list = wx.ListBox(
 			self,
-			size=self.scaleSize((500, 300)),  # height is chosen to ensure the dialog will fit on an 800x600 screen,
+			size=self.scaleSize((500, 200)),
 			style=wx.LB_SINGLE
 		)
 		self.list.Bind(wx.EVT_LISTBOX, self.onListItemSelected)
 		contentsSizer.Add(self.list, flag=wx.EXPAND)
-		contentsSizer.AddSpacer(gui.guiHelper.SPACE_BETWEEN_VERTICAL_DIALOG_ITEMS)
-		self.description = gui.guiHelper.LabeledControlHelper(
+		contentsSizer.AddSpacer(guiHelper.SPACE_BETWEEN_VERTICAL_DIALOG_ITEMS)
+		self.description = guiHelper.LabeledControlHelper(
 			self,
 			# Translators: label for a read-only edit field displaying event properties.
-			_("Event &description"),
+			_("Event\n&description"),
 			wx.TextCtrl,
 			style=wx.TE_MULTILINE | wx.TE_READONLY | wx.TE_DONTWRAP
 		)
-		contentsSizer.Add(self.description.sizer)
+		self.description.sizer.GetItem(self.description.control).SetProportion(1)
+		self.description.sizer.GetItem(self.description.control).SetFlag(wx.EXPAND)
+		contentsSizer.Add(self.description.sizer, flag=wx.EXPAND)
 
-		mainSizer.Add(contentsSizer, border=gui.guiHelper.BORDER_FOR_DIALOGS, flag=wx.ALL)
-		mainSizer.Fit(self)
+		mainSizer.Add(contentsSizer, proportion=1, border=guiHelper.BORDER_FOR_DIALOGS, flag=wx.ALL)
 		self.SetSizer(mainSizer)
 		self.CentreOnScreen()
 		self._createEventsList()
