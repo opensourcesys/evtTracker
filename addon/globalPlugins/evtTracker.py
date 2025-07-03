@@ -23,14 +23,15 @@ def disableInSecureMode(cls):
 
 class Event(object):
 	def __init__(self, type: str, info: list[str]) -> None:
+		super().__init__()
 		self.type = type
 		self.info = info
 
 
 @disableInSecureMode
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
-	def __init__(self, *args, **kw):
-		super().__init__(*args, **kw)
+	def __init__(self):
+		super().__init__()
 		self.eventHistory = deque([], 100)
 
 	# Record info about events and objects.
