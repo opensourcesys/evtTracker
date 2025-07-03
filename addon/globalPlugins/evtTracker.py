@@ -1,5 +1,5 @@
 # NVDA Event Tracker/Investigator
-# Copyright 2017-2023 Joseph Lee, Thiago Seus, 2023 Luke Davis and Open Source Systems, Ltd., all rights reserved.
+# Copyright 2017-2025 Joseph Lee, Thiago Seus, 2023 Luke Davis and Open Source Systems, Ltd., all rights reserved.
 # Released under GPL V2.
 
 from comtypes import COMError
