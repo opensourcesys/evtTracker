@@ -41,8 +41,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def evtDebugLogging(
 			self,
 			obj: NVDAObjects.NVDAObject,
-			event: Optional[str] = None,
-			additionalInfo: Optional[str] = None
+			event: str | None = None,
+			additionalInfo: str | None = None
 	) -> None:
 		info: List[str] = [f"object: {repr(obj)}"]
 		info.append(f"name: {obj.name}")
