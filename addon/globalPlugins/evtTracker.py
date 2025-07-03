@@ -25,7 +25,7 @@ def disableInSecureMode(cls):
 
 class Event(object):
 
-	def __init__(self, type: str, info: List[str]) -> None:
+	def __init__(self, type: str, info: list[str]) -> None:
 		self.type = type
 		self.info = info
 
@@ -44,7 +44,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			event: str | None = None,
 			additionalInfo: str | None = None
 	) -> None:
-		info: List[str] = [f"object: {repr(obj)}"]
+		info: list[str] = [f"object: {repr(obj)}"]
 		info.append(f"name: {obj.name}")
 		# Use a friendly name for role (credit: NV Access).
 		info.append("role: %s" % obj.role)
