@@ -4,8 +4,6 @@
 
 from comtypes import COMError
 from collections import deque
-from typing import Optional, List
-
 from gui.dpiScalingHelper import DpiScalingHelperMixinWithoutInit
 import gui
 import globalPluginHandler
