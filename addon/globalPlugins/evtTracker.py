@@ -11,7 +11,7 @@ import globalVars
 from logHandler import log
 from NVDAObjects.IAccessible import IAccessible
 from NVDAObjects.UIA import UIA
-import NVDAObjects
+from NVDAObjects import NVDAObject
 from scriptHandler import script
 import wx
 
@@ -37,7 +37,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	# Record info about events and objects.
 	def evtDebugLogging(
 			self,
-			obj: NVDAObjects.NVDAObject,
+			obj: NVDAObject,
 			event: str | None = None,
 			additionalInfo: str | None = None
 	) -> None:
