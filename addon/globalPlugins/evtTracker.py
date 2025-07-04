@@ -45,7 +45,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		info: list[str] = [f"object: {repr(obj)}"]
 		info.append(f"name: {obj.name}")
 		# Use a friendly name for role (credit: NV Access).
-		info.append("role: %s" % obj.role)
+		info.append("role: %s" % obj.role.name)
 		if not event:
 			event = "no event specified"
 		info.append(f"event: {event}")
