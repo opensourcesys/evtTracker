@@ -1,8 +1,6 @@
 # Event Tracker
 
 * Author: Joseph Lee, Thiago Seus
-* Download [stable version][1]
-* NVDA compatibility: 2022.4 and later
 
 This add-on outputs information about objects for which events were fired. Properties recorded in debug log mode include object type, name, role, event, app module, and accessibility API specific information such as accName for IAccessible object and Automation Id for UIA objects.
 
@@ -35,7 +33,15 @@ For each event, the following information will be recorded:
 
 You can also assign a gesture to view the events on a list (NVDA menu/Preferences/Input gestures, Event Tracker category). The list saves up to 100 latest events processed.
 
-If you find this add-on useful, please [review it][2] in the NVDA Add-on Store.
+If you find this add-on useful, please [review it][1] in the NVDA Add-on Store.
+
+## Version 25.1.0
+
+* NVDA 2025.1 compatibility.
+* NVDA 2024.1 or later is required due to Python 3.11 upgrade.
+* Restored limited support for Windows 8.1.
+* Made the add-on code more robust with help from Pyright (a Python static type checker).
+* NVDA will record actual control role name instead of integers when reporting events.
 
 ## Version 24.1.0
 
@@ -79,5 +85,4 @@ If you find this add-on useful, please [review it][2] in the NVDA Add-on Store.
 
 * Initial release.
 
-[1]: https://www.nvaccess.org/addonStore/legacy?file=evtTracker
-[2]: https://github.com/nvaccess/addon-datastore/discussions/2717
+[1]: https://github.com/nvaccess/addon-datastore/discussions/2717
