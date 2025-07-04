@@ -4,6 +4,7 @@
 
 from comtypes import COMError
 from collections import deque
+from collections.abc import Callable
 from gui.dpiScalingHelper import DpiScalingHelperMixinWithoutInit
 import gui
 import globalPluginHandler
@@ -93,61 +94,62 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	# Record object properties when events are fired.
 	# General dev info for base object, followed by API specific ones such as UIA properties.
 
-	def event_gainFocus(self, obj, nextHandler):
+	def event_gainFocus(self, obj: NVDAObject, nextHandler: Callable):
 		self.evtDebugLogging(obj, "gainFocus")
 		nextHandler()
 
-	def event_loseFocus(self, obj, nextHandler):
+	def event_loseFocus(self, obj: NVDAObject, nextHandler: Callable):
 		self.evtDebugLogging(obj, "loseFocus")
 		nextHandler()
 
-	def event_focusEntered(self, obj, nextHandler):
+	def event_focusEntered(self, obj: NVDAObject, nextHandler: Callable):
 		self.evtDebugLogging(obj, "focusEntered")
 		nextHandler()
 
-	def event_foreground(self, obj, nextHandler):
+	def event_foreground(self, obj: NVDAObject, nextHandler: Callable):
 		self.evtDebugLogging(obj, "foreground")
 		nextHandler()
 
-	def event_nameChange(self, obj, nextHandler):
+	def event_nameChange(self, obj: NVDAObject, nextHandler: Callable):
 		self.evtDebugLogging(obj, "nameChange")
 		nextHandler()
 
-	def event_valueChange(self, obj, nextHandler):
+	def event_valueChange(self, obj: NVDAObject, nextHandler: Callable):
 		self.evtDebugLogging(obj, "valueChange")
 		nextHandler()
 
-	def event_stateChange(self, obj, nextHandler):
+	def event_stateChange(self, obj: NVDAObject, nextHandler: Callable):
 		self.evtDebugLogging(obj, "stateChange")
 		nextHandler()
 
-	def event_descriptionChange(self, obj, nextHandler):
+	def event_descriptionChange(self, obj: NVDAObject, nextHandler: Callable):
 		self.evtDebugLogging(obj, "descriptionChange")
 		nextHandler()
 
-	def event_UIA_controllerFor(self, obj, nextHandler):
+	def event_UIA_controllerFor(self, obj: NVDAObject, nextHandler: Callable):
 		self.evtDebugLogging(obj, "UIA_controllerFor")
 		nextHandler()
 
-	def event_liveRegionChange(self, obj, nextHandler):
+	def event_liveRegionChange(self, obj: NVDAObject, nextHandler: Callable):
 		self.evtDebugLogging(obj, "liveRegionChange")
 		nextHandler()
 
-	def event_UIA_elementSelected(self, obj, nextHandler):
+	def event_UIA_elementSelected(self, obj: NVDAObject, nextHandler: Callable):
 		self.evtDebugLogging(obj, "UIA_elementSelected")
 		nextHandler()
 
-	def event_UIA_systemAlert(self, obj, nextHandler):
+	def event_UIA_systemAlert(self, obj: NVDAObject, nextHandler: Callable):
 		self.evtDebugLogging(obj, "UIA_systemAlert")
 		nextHandler()
 
-	def event_UIA_window_windowOpen(self, obj, nextHandler):
+	def event_UIA_window_windowOpen(self, obj: NVDAObject, nextHandler: Callable):
 		self.evtDebugLogging(obj, "UIA_window_windowOpen")
 		nextHandler()
 
 	def event_UIA_notification(
-			self, obj, nextHandler,
-			notificationKind=None, notificationProcessing=None, displayString=None, activityId=None
+			self, obj: NVDAObject, nextHandler: Callable,
+			notificationKind: int | None = None, notificationProcessing: int | None = None,
+			displayString: str | None = None, activityId: str | None = None
 	):
 		# Introduced in Windows 10 1709 (Fall Creators Update), to be treated as a notification event.
 		notificationInfo = [
@@ -160,29 +162,29 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.evtDebugLogging(obj, "UIA_notification", additionalInfo="\n".join(notificationInfo))
 		nextHandler()
 
-	def event_UIA_toolTipOpened(self, obj, nextHandler):
+	def event_UIA_toolTipOpened(self, obj: NVDAObject, nextHandler: Callable):
 		self.evtDebugLogging(obj, "UIA_toolTipOpened")
 		nextHandler()
 
-	def event_UIA_itemStatus(self, obj, nextHandler):
+	def event_UIA_itemStatus(self, obj: NVDAObject, nextHandler: Callable):
 		self.evtDebugLogging(
 			obj, "UIA_itemStatus",
 			additionalInfo=f"item status: {obj.UIAElement.currentItemStatus}"
 		)
 		nextHandler()
 
-	def event_textChange(self, obj, nextHandler):
+	def event_textChange(self, obj: NVDAObject, nextHandler: Callable):
 		self.evtDebugLogging(obj, "textChange")
 		nextHandler()
 
-	def event_UIA_layoutInvalidated(self, obj, nextHandler):
+	def event_UIA_layoutInvalidated(self, obj: NVDAObject, nextHandler: Callable):
 		self.evtDebugLogging(
 			obj, "layoutInvalidated",
 			additionalInfo=f"list item count: {obj.childCount}"
 		)
 		nextHandler()
 
-	def event_UIA_dragDropEffect(self, obj, nextHandler):
+	def event_UIA_dragDropEffect(self, obj: NVDAObject, nextHandler: Callable):
 		UIA_DragDropEffectPropertyId = 30139
 		dragDropEffect = obj._getUIACacheablePropertyValue(UIA_DragDropEffectPropertyId)
 		self.evtDebugLogging(
@@ -191,7 +193,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		)
 		nextHandler()
 
-	def event_UIA_dropTargetEffect(self, obj, nextHandler):
+	def event_UIA_dropTargetEffect(self, obj: NVDAObject, nextHandler: Callable):
 		UIA_DropTargetDropTargetEffectPropertyId = 30142
 		dropTargetEffect = obj._getUIACacheablePropertyValue(UIA_DropTargetDropTargetEffectPropertyId)
 		self.evtDebugLogging(
@@ -200,7 +202,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		)
 		nextHandler()
 
-	def event_alert(self, obj, nextHandler):
+	def event_alert(self, obj: NVDAObject, nextHandler: Callable):
 		self.evtDebugLogging(obj, "alert")
 		nextHandler()
 
