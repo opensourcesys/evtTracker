@@ -100,9 +100,7 @@ reportInvalidTypeArguments = true
 reportInvalidTypeForm = true
 reportInvalidTypeVarUse = true
 reportMatchNotExhaustive = true
-reportMissingImports = true
 reportMissingModuleSource = true
-reportMissingParameterType = true
 reportMissingSuperCall = true
 reportMissingTypeArgument = true
 reportNoOverloadImplementation = true
@@ -125,23 +123,16 @@ reportShadowedImports = true
 reportTypeCommentUsage = true
 reportTypedDictNotRequiredAccess = true
 reportUnboundVariable = true
-reportUndefinedVariable = true
 reportUnhashable = true
 reportUninitializedInstanceVariable = true
-reportUnknownArgumentType = true
 reportUnknownLambdaType = true
-reportUnknownMemberType = true
-reportUnknownParameterType = true
-reportUnknownVariableType = true
 reportUnnecessaryCast = true
 reportUnnecessaryComparison = true
 reportUnnecessaryContains = true
 reportUnnecessaryIsInstance = true
 reportUnnecessaryTypeIgnoreComment = true
 reportUnsupportedDunderAll = true
-reportUntypedBaseClass = true
 reportUntypedClassDecorator = true
-reportUntypedFunctionDecorator = true
 reportUntypedNamedTuple = true
 reportUnusedCallResult = true
 reportUnusedClass = true
@@ -158,3 +149,12 @@ reportMissingTypeStubs = false
 
 # Bad rules
 # These are sorted alphabetically and should be enabled and moved to compliant rules section when resolved.
+reportMissingImports = false  # NVDA Core modules
+reportMissingParameterType = false  # Script gesture, custom types defined in the global plugin
+reportUndefinedVariable = false  # _ = gettext.gettext call
+reportUnknownArgumentType = false  # NVDA Core types for arguments in event handler debug logging
+reportUnknownMemberType = false  # Attributes and classes coming from NVDA Core
+reportUnknownParameterType = false  # NVDA Core parameter types
+reportUnknownVariableType = false  # Types coming from NVDA Core
+reportUntypedBaseClass = false  # Derives from classes defined in NVDA Core such as base global plugin class
+reportUntypedFunctionDecorator = false  # Script decorator
