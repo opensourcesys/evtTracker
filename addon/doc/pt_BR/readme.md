@@ -1,9 +1,6 @@
 # Event Tracker #
-# Rastreador de eventos
 
 * Autores: Joseph Lee, Thiago Seus
-* Download [versão estável][1]
-* Compatibilidade com NVDA: 2022.4 e posterior
 
 Esse complemento gera informações sobre objetos para os quais os eventos
 foram disparados. As propriedades registradas no modo de log de depuração
@@ -57,11 +54,25 @@ Também é possível atribuir um gesto para visualizar os eventos em uma lista
 (menu NVDA/Preferências/Gestos de entrada, categoria Event Tracker). A lista
 salva até 100 eventos mais recentes processados.
 
-Se você achar esse complemento útil, [avalie-o][2] na Loja do NVDA.
+If you find this add-on useful, please [review it][1] in the NVDA Add-on
+Store.
+
+## Version 25.1.0
+
+* NVDA 2025.1 compatibility.
+* NVDA 2024.1 or later is required due to Python 3.11 upgrade.
+* Restored limited support for Windows 8.1.
+* Made the add-on code more robust with help from Pyright (a Python static
+  type checker).
+* NVDA will record actual control role name instead of integers when
+  reporting events.
 
 ## Versão 24.1.0
 
 * Compatibilidade com o NVDA 2024.1.
+* opensourcesys/evtTracker #4: the first event's description no longer
+  missing when first opening the event viewer. Contributed by: WangFeng
+  Huang (hwf1324)
 
 ## Versão 23.02
 
@@ -110,8 +121,4 @@ Se você achar esse complemento útil, [avalie-o][2] na Loja do NVDA.
 
 * Lançamento inicial.
 
-[[!tag dev stable]]
-
-[1]: https://www.nvaccess.org/addonStore/legacy?file=evtTracker
-
-[2]: https://github.com/nvaccess/addon-datastore/discussions/2717
+[1]: https://github.com/nvaccess/addon-datastore/discussions/2717

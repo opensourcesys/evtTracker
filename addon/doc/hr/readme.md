@@ -1,9 +1,6 @@
 # Praćenje događaja (Event Tracker) #
-# Praćenje događaja
 
 * Autor: Joseph Lee, Thiago Seus
-* Preuzmi [stabilnu verziju][1]
-* NVDA kompatibilnost: 2022.4 i novije verzije
 
 Ovaj dodatak daje informacije o objektima za koje su pokrenuti
 događaji. Svojstva zabilježena u načinu dnevnika otklanjanja grešaka
@@ -55,12 +52,25 @@ Možeš dodijeliti i gestu za pregled događaja na popisu (NVDA
 izbornik/Postavke/Geste unosa, kategorija „Praćenje događaja”). Popis sprema
 do 100 najnovijih obrađenih događaja.
 
-If you find this add-on useful, please [review it][2] in the NVDA Add-on
+If you find this add-on useful, please [review it][1] in the NVDA Add-on
 Store.
+
+## Version 25.1.0
+
+* NVDA 2025.1 compatibility.
+* NVDA 2024.1 or later is required due to Python 3.11 upgrade.
+* Restored limited support for Windows 8.1.
+* Made the add-on code more robust with help from Pyright (a Python static
+  type checker).
+* NVDA will record actual control role name instead of integers when
+  reporting events.
 
 ## Verzija 24.10
 
 * Kompatibilnost s NVDA 2024.1.
+* opensourcesys/evtTracker #4: the first event's description no longer
+  missing when first opening the event viewer. Contributed by: WangFeng
+  Huang (hwf1324)
 
 ## Verzija 23.02
 
@@ -107,8 +117,4 @@ Store.
 
 * Prvo izdanje.
 
-[[!tag dev stable]]
-
-[1]: https://www.nvaccess.org/addonStore/legacy?file=evtTracker
-
-[2]: https://github.com/nvaccess/addon-datastore/discussions/2717
+[1]: https://github.com/nvaccess/addon-datastore/discussions/2717

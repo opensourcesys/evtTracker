@@ -1,9 +1,6 @@
 # 事件跟踪器 #
-# Event Tracker
 
 * Author: Joseph Lee, Thiago Seus
-* 下载 [稳定版][1]
-* NVDA 兼容性：2022.4 及更高版本
 
 此插件输出有关为其触发事件的对象的信息。在调试日志模式中记录的属性包括对象类型、名称、角色、事件、应用程序模块和可访问性 API 特定信息，例如
 IAccessible 对象的 accName 和 UIA 对象的自动化 Id。
@@ -39,12 +36,25 @@ IAccessible 对象的 accName 和 UIA 对象的自动化 Id。
 
 您还可以指定一个手势以在列表中查看事件（NVDA 菜单选项/按键与手势，事件跟踪器类别）。该列表最多保存 100 个已处理的最新事件。
 
-If you find this add-on useful, please [review it][2] in the NVDA Add-on
+If you find this add-on useful, please [review it][1] in the NVDA Add-on
 Store.
+
+## Version 25.1.0
+
+* NVDA 2025.1 compatibility.
+* NVDA 2024.1 or later is required due to Python 3.11 upgrade.
+* Restored limited support for Windows 8.1.
+* Made the add-on code more robust with help from Pyright (a Python static
+  type checker).
+* NVDA will record actual control role name instead of integers when
+  reporting events.
 
 ## Version 24.1.0
 
 * NVDA 2024.1 compatibility.
+* opensourcesys/evtTracker #4: the first event's description no longer
+  missing when first opening the event viewer. Contributed by: WangFeng
+  Huang (hwf1324)
 
 ## 版本 23.02
 
@@ -83,8 +93,4 @@ Store.
 
 * 初始发行。
 
-[[!tag dev stable]]
-
-[1]: https://www.nvaccess.org/addonStore/legacy?file=evtTracker
-
-[2]: https://github.com/nvaccess/addon-datastore/discussions/2717
+[1]: https://github.com/nvaccess/addon-datastore/discussions/2717

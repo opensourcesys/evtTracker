@@ -1,9 +1,6 @@
 # Olay İzleyici #
-# Olay İzleyici
 
 * Yazarlar: Joseph Lee, Thiago Seus
-* [Kararlı sürümü indir][1]
-* NVDA uyumluluğu: 2022.4 ve sonrası
 
 Bu eklenti, olayların tetiklendiği nesneler hakkında bilgi verir. Hata
 ayıklama günlük modunda kaydedilen özellikler, nesne türü, ad, rol, olay,
@@ -53,11 +50,24 @@ Ayrıca olayları bir listede görüntülemek için bir hareket atayabilirsiniz
 işlenen en son 100 olayı kaydeder.
 
 Bu eklentiyi yararlı buluyorsanız, lütfen NVDA Eklenti Mağazasında
-[inceleyin][2].
+[inceleyin][1].
+
+## Sürüm 25.1.0
+
+* NVDA uyumluluğu: 2025.1 ve sonrası.
+* Python 3.11 yükseltmesi nedeniyle NVDA 2024.1 veya üstü gereklidir.
+* Windows 8.1 için sınırlı destek geri yüklendi.
+* Pyright (bir Python statik tür denetleyicisi) yardımıyla eklenti kodu daha
+  sağlam hale getirildi.
+* NVDA, olayları bildirirken tamsayılar yerine gerçek kontrol rolü adını
+  kaydeder.
 
 ## Sürüm 24.1.0
 
 * NVDA uyumluluğu: 2024.1 ve sonrası.
+* openSourcesys/EVTTRACKER #4: Etkinlik görüntüleyicisini ilk açarken ilk
+  olayın açıklaması artık eksik değil. Katkıda bulunan: Wangfeng Huang
+  (HWF1324)
 
 ## Sürüm 23.02
 
@@ -104,8 +114,4 @@ Bu eklentiyi yararlı buluyorsanız, lütfen NVDA Eklenti Mağazasında
 
 * İlk sürüm.
 
-[[!tag dev stable]]
-
-[1]: https://www.nvaccess.org/addonStore/legacy?file=evtTracker
-
-[2]: https://github.com/nvaccess/addon-datastore/discussions/2717
+[1]: https://github.com/nvaccess/addon-datastore/discussions/2717

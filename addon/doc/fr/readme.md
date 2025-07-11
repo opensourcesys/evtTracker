@@ -1,9 +1,6 @@
 # Event Tracker #
-# Event Tracker
 
 * Auteur : Joseph Lee, Thiago Seus
-* Télécharger [version stable][1]
-* Compatibility NVDA : 2022.4 et supérieure
 
 Cette extension affiche des informations sur les objets pour lesquels des
 événements ont été déclenchés. Les propriétés enregistrées dans le mode de
@@ -60,11 +57,25 @@ liste (menu NVDA / Préférences / Gestes de commandes, catégorie  Event
 Tracker). la liste sauvegarde jusqu'à 100 derniers événements traités.
 
 Si vous trouvez cette extension utile, veuillez laisser un [avis
-(review)][2] dans l'Add-on Store de NVDA.
+(review)][1] dans l'Add-on Store de NVDA.
+
+## Version 25.1.0
+
+* Compatibilité NVDA 2025.1.
+* NVDA 2024.1 ou version ultérieure est requis en raison de la mise à niveau
+  de Python 3.11.
+* Restauré la prise en charge limitée pour Windows 8.1.
+* Rendu le code de l'extension plus robuste avec l'aide de Pyright (un
+  vérificateur de type statique Python).
+* NVDA enregistrera le nom du rôle de contrôle réel au lieu des entiers lors
+  du signalement des événements.
 
 ## Version 24.1.0
 
 * Compatibilité NVDA 2024.1.
+* opensourcesys/evtTracker #4: La description du premier événement ne manque
+  plus lors de l'ouverture de la visionneuse de l'événement. Contribué par:
+  WangFeng Huang (hwf1324)
 
 ## Version 23.02
 
@@ -115,8 +126,4 @@ Si vous trouvez cette extension utile, veuillez laisser un [avis
 
 * Première version.
 
-[[!tag dev stable]]
-
-[1]: https://www.nvaccess.org/addonStore/legacy?file=evtTracker
-
-[2]: https://github.com/nvaccess/addon-datastore/discussions/2717
+[1]: https://github.com/nvaccess/addon-datastore/discussions/2717
