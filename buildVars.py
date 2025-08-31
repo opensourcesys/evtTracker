@@ -26,8 +26,11 @@ addon_info = AddonInfo(
 	addon_version="25.1",
 	# Brief changelog for this version
 	# Translators: what's new content for the add-on version to be shown in the add-on store
-	addon_changelog=_("""Changelog for the add-on version.
-It can span multiple lines."""),
+	addon_changelog=_("""* NVDA 2025.1 compatibility.
+* NVDA 2024.1 or later is required due to Python 3.11 upgrade.
+* Restored limited support for Windows 8.1.
+* Made the add-on code more robust with help from Pyright (a Python static type checker).
+* NVDA will record actual control role name instead of integers when reporting events."""),
 	# Author(s)
 	addon_author="Joseph Lee <joseph.lee22590@gmail.com>, Luke Davis <XLTechie@newanswertech.com>, Thiago Seus <thiago.seus@yahoo.com.br>",
 	# URL for the add-on documentation support
