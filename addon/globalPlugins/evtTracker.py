@@ -215,7 +215,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# We need this to be a modal dialog, but it mustn't block this script.
 		def run():
 			gui.mainFrame.prePopup()
-			d = EventsListDialog(self.eventHistory)
+			# Create a copy (snapshot) of the event history so far.
+			d = EventsListDialog(list(self.eventHistory))
 			d.ShowModal()
 			d.Destroy()
 			gui.mainFrame.postPopup()
