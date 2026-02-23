@@ -31,9 +31,14 @@ For each event, the following information will be recorded:
 * For IAccessible objects: acc name, child ID
 * For UIA objects: Automation Id, class name, notification properties if recording notification event information, child count for layout invalidated event, properties for item status, drag drop, and drop target effect if defined
 
-You can also assign a gesture to view the events on a list (NVDA menu/Preferences/Input gestures, Event Tracker category). The list saves up to 100 latest events processed.
+You can also assign a gesture to view the events on a list (NVDA menu/Preferences/Input gestures, Event Tracker category). The list saves up to 100 latest events processed prior to opening the dialog.
 
 If you find this add-on useful, please [review it][1] in the NVDA Add-on Store.
+
+## Version 26.1.0
+
+* The events list dialog will no longer show confusing information for the last event description when left open for an extended time.
+* UIA drop target effect text is fetched from the focus ancestor object if the UIA object raising this event does not record this information.
 
 ## Version 25.1.0
 
