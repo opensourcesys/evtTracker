@@ -23,7 +23,7 @@ addon_info = AddonInfo(
 	# Translators: Long description to be shown for this add-on on add-on information from add-on store
 	addon_description=_("""Tracks events and displays information about them"""),
 	# version
-	addon_version="25.1",
+	addon_version="26.1",
 	# Brief changelog for this version
 	# Translators: what's new content for the add-on version to be shown in the add-on store
 	addon_changelog=_("""* The events list dialog will no longer show confusing information for the last event description when left open for an extended time.
