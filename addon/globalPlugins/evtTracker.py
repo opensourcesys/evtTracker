@@ -9,6 +9,7 @@ from gui.dpiScalingHelper import DpiScalingHelperMixinWithoutInit
 import gui
 import globalPluginHandler
 import globalVars
+import api
 from logHandler import log
 from NVDAObjects.IAccessible import IAccessible
 from NVDAObjects.UIA import UIA
@@ -196,6 +197,20 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def event_UIA_dropTargetEffect(self, obj: NVDAObject, nextHandler: Callable[[], None]):
 		UIA_DropTargetDropTargetEffectPropertyId = 30142
 		dropTargetEffect = obj._getUIACacheablePropertyValue(UIA_DropTargetDropTargetEffectPropertyId)
+		# Sometimes the object's ancestor records drop target effect text.
+		# Just like NVDA Core, try retrieving drop target effect text coming form ancestor objects.
+		if not dropTargetEffect:
+			for element in reversed(api.getFocusAncestors()):
+				if not isinstance(element, UIA):
+					continue
+				try:
+					dropTargetEffect = element._getUIACacheablePropertyValue(
+						UIA_DropTargetDropTargetEffectPropertyId,
+					)
+				except COMError:
+					dropTargetEffect = ""
+				if dropTargetEffect:
+					break
 		self.evtDebugLogging(
 			obj, "dropTargetEffect",
 			additionalInfo=f"drop target effect: {dropTargetEffect}"
