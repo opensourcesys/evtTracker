@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
-"POT-Creation-Date: 2025-09-17 05:05+0000\n"
-"PO-Revision-Date: 2026-03-02 00:38\n"
+"POT-Creation-Date: 2026-03-02 03:38+0000\n"
+"PO-Revision-Date: 2026-03-09 00:39\n"
 "Last-Translator: \n"
 "Language-Team: Turkish\n"
 "Language: tr_TR\n"
@@ -18,17 +18,17 @@ msgstr ""
 "X-Crowdin-File-ID: 438\n"
 
 #. Translators: input help message for a command in Event Tracker add-on.
-#: addon/globalPlugins/evtTracker.py:211
+#: addon/globalPlugins/evtTracker.py:226
 msgid "Shows the list of processed events"
 msgstr "İşlenen olayların listesini gösterir"
 
 #. Translators: title of a dialog displaying recent events.
-#: addon/globalPlugins/evtTracker.py:233
+#: addon/globalPlugins/evtTracker.py:249
 msgid "Events List"
 msgstr "Olay Listesi"
 
 #. Translators: label for a read-only edit field displaying event properties.
-#: addon/globalPlugins/evtTracker.py:249
+#: addon/globalPlugins/evtTracker.py:265
 msgid "Event &description"
 msgstr "&Olay Açıklaması"
 
@@ -48,14 +48,8 @@ msgstr "Olayları izler ve bunlarla ilgili bilgileri görüntüler"
 #. Brief changelog for this version
 #. Translators: what's new content for the add-on version to be shown in the add-on store
 #: buildVars.py:29
-msgid "* NVDA 2025.1 compatibility.\n"
-"* NVDA 2024.1 or later is required due to Python 3.11 upgrade.\n"
-"* Restored limited support for Windows 8.1.\n"
-"* Made the add-on code more robust with help from Pyright (a Python static type checker).\n"
-"* NVDA will record actual control role name instead of integers when reporting events."
-msgstr "* NVDA 2025.1  ile Uyumluluk.\n"
-"* Python 3.11 yükseltmesi nedeniyle NVDA 2024.1 veya üstü gereklidir.\n"
-"* Windows 8.1 için sınırlı destek geri yüklendi.\n"
-"* Eklenti kodu Pyright'ın (Python statik tip denetleyicisi) yardımıyla daha sağlam hale getirildi.\n"
-"* NVDA, olayları bildirirken tamsayılar yerine gerçek kontrol rolü adını kaydeder."
+msgid "* The events list dialog will no longer show confusing information for the last event description when left open for an extended time.\n"
+"* UIA drop target effect text is fetched from the focus ancestor object if the UIA object raising this event does not record this information."
+msgstr "* Olay listesi iletişim kutusu, uzun süre açık bırakıldığında artık son olay açıklamasına ilişkin kafa karıştırıcı bilgiler göstermeyecektir.\n"
+"* Bu olayı oluşturan UIA nesnesi bu bilgiyi kaydetmezse, UIA bırakma hedefi efekt metni odak ata nesnesinden alınır."
 

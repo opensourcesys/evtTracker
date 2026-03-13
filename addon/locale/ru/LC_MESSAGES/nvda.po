@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
-"POT-Creation-Date: 2025-09-17 05:05+0000\n"
-"PO-Revision-Date: 2026-03-02 00:38\n"
+"POT-Creation-Date: 2026-03-02 03:38+0000\n"
+"PO-Revision-Date: 2026-03-09 00:39\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
@@ -18,17 +18,17 @@ msgstr ""
 "X-Crowdin-File-ID: 438\n"
 
 #. Translators: input help message for a command in Event Tracker add-on.
-#: addon/globalPlugins/evtTracker.py:211
+#: addon/globalPlugins/evtTracker.py:226
 msgid "Shows the list of processed events"
 msgstr "Показывает список обработанных событий"
 
 #. Translators: title of a dialog displaying recent events.
-#: addon/globalPlugins/evtTracker.py:233
+#: addon/globalPlugins/evtTracker.py:249
 msgid "Events List"
 msgstr "Список Событий"
 
 #. Translators: label for a read-only edit field displaying event properties.
-#: addon/globalPlugins/evtTracker.py:249
+#: addon/globalPlugins/evtTracker.py:265
 msgid "Event &description"
 msgstr "&Описание события"
 
@@ -48,14 +48,8 @@ msgstr "Отслеживает события и отображает инфор
 #. Brief changelog for this version
 #. Translators: what's new content for the add-on version to be shown in the add-on store
 #: buildVars.py:29
-msgid "* NVDA 2025.1 compatibility.\n"
-"* NVDA 2024.1 or later is required due to Python 3.11 upgrade.\n"
-"* Restored limited support for Windows 8.1.\n"
-"* Made the add-on code more robust with help from Pyright (a Python static type checker).\n"
-"* NVDA will record actual control role name instead of integers when reporting events."
-msgstr "* Совместимость с NVDA 2025.1.\n"
-"* Требуется NVDA 2024.1 или выше из -за обновления Python 3.11.\n"
-"* Восстановлена ограниченная поддержка Windows 8.1.\n"
-"* Код дополнения сделан более надёжно с помощью Pyright (проверка статического типа Python).\n"
-"* NVDA будет записывать фактическое имя роли управления вместо целых чисел при сообщении о событиях."
+msgid "* The events list dialog will no longer show confusing information for the last event description when left open for an extended time.\n"
+"* UIA drop target effect text is fetched from the focus ancestor object if the UIA object raising this event does not record this information."
+msgstr "* В диалоге списка событий больше не будет отображаться запутанная информация для описания последнего события, если оно остаётся открытым в течение длительного времени.\n"
+"* Текст эффекта удаления цели UIA извлекается из объекта-предка фокуса, если объект UIA, вызывающий это событие, не записывает эту информацию."
 

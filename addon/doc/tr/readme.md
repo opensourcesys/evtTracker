@@ -31,9 +31,14 @@ Her olay için aşağıdaki bilgiler kaydedilecektir:
 * IErişilebilir nesneler için: erişim adı, alt kimlik
 * UIA nesneleri için: Otomasyon Kimliği, sınıf adı, bildirim olay bilgisi kaydediliyorsa bildirim özellikleri, düzen geçersiz kılınan olay için çocuk sayısı, öğe durumu özellikleri, tanımlıysa sürükle bırak ve bırakma hedefi etkisi
 
-Ayrıca olayları bir listede görüntülemek için bir hareket atayabilirsiniz (NVDA menüsü/Tercihler/Girdi hareketleri, Olay İzleyici kategorisi). Liste, işlenen en son 100 olayı kaydeder.
+Ayrıca, olayları bir listede görüntülemek için bir hareket de atayabilirsiniz (NVDA menüsü/Tercihler/Girdi hareketleri, Olay İzleyici kategorisi). Liste, iletişim kutusunu açmadan önce işlenen en son 100 olayı kaydeder.
 
 Bu eklentiyi yararlı buluyorsanız, lütfen NVDA Eklenti Mağazasında [inceleyin][1].
+
+## Sürüm 26.1.0
+
+* Olay listesi iletişim kutusu, uzun süre açık bırakıldığında artık son olay açıklamasına ilişkin kafa karıştırıcı bilgiler göstermeyecektir.
+* Bu olayı oluşturan UIA nesnesi bu bilgiyi kaydetmezse, UIA bırakma hedefi efekt metni odak ata nesnesinden alınır.
 
 ## Sürüm 25.1.0
 
