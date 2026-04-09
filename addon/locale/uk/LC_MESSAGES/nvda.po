@@ -1,0 +1,57 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
+"POT-Creation-Date: 2026-04-09 18:38+0300\n"
+"PO-Revision-Date: 2026-04-09 19:13+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.9\n"
+"X-Poedit-Basepath: .\n"
+
+#. Translators: input help message for a command in Event Tracker add-on.
+#: addon\globalPlugins\evtTracker.py:226
+msgid "Shows the list of processed events"
+msgstr "Показує список оброблених подій"
+
+#. Translators: title of a dialog displaying recent events.
+#: addon\globalPlugins\evtTracker.py:249
+msgid "Events List"
+msgstr "Список подій"
+
+#. Translators: label for a read-only edit field displaying event properties.
+#: addon\globalPlugins\evtTracker.py:265
+msgid "Event &description"
+msgstr "Подія &опис"
+
+#. Add-on summary/title, usually the user visible name of the add-on
+#. Translators: Summary/title for this add-on
+#. to be shown on installation and add-on information found in add-on store
+#: buildVars.py:21
+msgid "Event Tracker"
+msgstr "Відстежувач подій"
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on add-on information from add-on store
+#: buildVars.py:24
+msgid "Tracks events and displays information about them"
+msgstr "Відстежує події та відображає інформацію про них"
+
+#. Brief changelog for this version
+#. Translators: what's new content for the add-on version to be shown in the add-on store
+#: buildVars.py:29
+msgid ""
+"* The events list dialog will no longer show confusing information for the "
+"last event description when left open for an extended time.\n"
+"* UIA drop target effect text is fetched from the focus ancestor object if "
+"the UIA object raising this event does not record this information."
+msgstr ""
+"* У діалозі списку подій більше не відображатиметься нечітка інформація "
+"щодо опису останньої події, якщо вікно залишається відкритим протягом "
+"тривалого часу.\n"
+"* Текст ефекту точки прив'язки UIA отримується з об'єкта-предка, що має "
+"фокус, якщо об'єкт UIA, який генерує цю подію, не зберігає цю інформацію."
