@@ -1,16 +1,14 @@
-# 事件跟踪器 #
+# 事件跟踪器
 
 * Author: Joseph Lee, Thiago Seus
 
-此插件输出有关为其触发事件的对象的信息。在调试日志模式中记录的属性包括对象类型、名称、角色、事件、应用程序模块和可访问性 API 特定信息，例如
-IAccessible 对象的 accName 和 UIA 对象的自动化 Id。
+此插件输出有关为其触发事件的对象的信息。在调试日志模式中记录的属性包括对象类型、名称、角色、事件、应用程序模块和可访问性 API 特定信息，例如 IAccessible 对象的 accName 和 UIA 对象的自动化 Id。
 
 注意：
 
 * 此插件专为需要跟踪来自应用程序和各种控件事件的开发者和高级用户而设计。
 * 为了使用此插件，NVDA 必须在调试模式下进行日志记录（从常规设置/日志记录级别进行配置，或在启用调试日志记录的情况下重新启动）。
-* 在 Event Tracker 之前运行的插件可能无法将事件传递给其他插件，包括 Event
-  Tracker。如果发生这种情况，事件跟踪器将无法记录事件。
+* 在 Event Tracker 之前运行的插件可能无法将事件传递给其他插件，包括 Event Tracker。如果发生这种情况，事件跟踪器将无法记录事件。
 * 事件按顺序从全局插件、应用程序模块、树拦截器和 NVDA 对象处理。
 
 ## 事件及其信息
@@ -31,30 +29,24 @@ IAccessible 对象的 accName 和 UIA 对象的自动化 Id。
 * 取决于事件的对象值或状态
 * 应用模块
 * 对于 IAccessible 对象：acc 名称、子 ID
-* 对于 UIA 对象：Automation
-  Id、类名、通知属性（如果记录通知事件信息）、布局无效事件的子对象数量、项目状态的属性、拖拽和放置（如果已定义）
+* 对于 UIA 对象：Automation Id、类名、通知属性（如果记录通知事件信息）、布局无效事件的子对象数量、项目状态的属性、拖拽和放置（如果已定义）
 
 您还可以指定一个手势以在列表中查看事件（NVDA 菜单选项/按键与手势，事件跟踪器类别）。该列表最多保存 100 个已处理的最新事件。
 
-If you find this add-on useful, please [review it][1] in the NVDA Add-on
-Store.
+If you find this add-on useful, please [review it][1] in the NVDA Add-on Store.
 
 ## Version 25.1.0
 
 * NVDA 2025.1 compatibility.
 * NVDA 2024.1 or later is required due to Python 3.11 upgrade.
 * Restored limited support for Windows 8.1.
-* Made the add-on code more robust with help from Pyright (a Python static
-  type checker).
-* NVDA will record actual control role name instead of integers when
-  reporting events.
+* Made the add-on code more robust with help from Pyright (a Python static type checker).
+* NVDA will record actual control role name instead of integers when reporting events.
 
 ## Version 24.1.0
 
 * NVDA 2024.1 compatibility.
-* opensourcesys/evtTracker #4: the first event's description no longer
-  missing when first opening the event viewer. Contributed by: WangFeng
-  Huang (hwf1324)
+* opensourcesys/evtTracker #4: the first event's description no longer missing when first opening the event viewer. Contributed by: WangFeng Huang (hwf1324)
 
 ## 版本 23.02
 
