@@ -7,7 +7,7 @@ This add-on outputs information about objects for which events were fired. Prope
 Notes:
 
 * This add-on is designed for developers and power users needing to track events coming from apps and various controls.
-* In order to use the add-on, NVDA must be logging in debug mode (configured from general settings/logging level, or restart with debug logging enabled).
+* In order to use the add-on, NVDA must be logging in debug mode (configured from general settings (Privacy and Security in NVDA 2026.1 and later)/logging level, or restart with debug logging enabled).
 * It might be possible that add-ons loaded earlier than Event Tracker may not pass on the event to other add-ons, including Event Tracker. If this happens, Event Tracker will not be able to log events.
 * Events are handled from global plugins, app modules, tree interceptors, and NVDA objects, in that order.
 
