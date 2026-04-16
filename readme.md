@@ -35,6 +35,10 @@ You can also assign a gesture to view the events on a list (NVDA menu/Preference
 
 If you find this add-on useful, please [review it][1] in the NVDA Add-on Store.
 
+## Version 26.2.0
+
+* NVDA 2025.3.3 or later is required.
+
 ## Version 26.1.0
 
 * The events list dialog will no longer show confusing information for the last event description when left open for an extended time.
