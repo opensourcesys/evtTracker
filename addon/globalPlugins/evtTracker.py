@@ -243,7 +243,7 @@ class EventsListDialog(
 		DpiScalingHelperMixinWithoutInit,
 		wx.Dialog
 ):
-	def __init__(self, eventHistory):
+	def __init__(self, eventHistory: list[Event]):
 		super().__init__(
 			parent=gui.mainFrame,
 			# Translators: title of a dialog displaying recent events.
