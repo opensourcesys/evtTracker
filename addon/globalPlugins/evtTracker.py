@@ -15,6 +15,7 @@ from NVDAObjects.IAccessible import IAccessible
 from NVDAObjects.UIA import UIA
 from NVDAObjects import NVDAObject
 from scriptHandler import script
+import inputCore
 import wx
 
 
@@ -226,7 +227,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		description=_("Shows the list of processed events"),
 		category="Event Tracker"
 	)
-	def script_displayEventsList(self, gesture):
+	def script_displayEventsList(self, gesture: inputCore.InputGesture):
 		# We need this to be a modal dialog, but it mustn't block this script.
 		def run():
 			gui.mainFrame.prePopup()
