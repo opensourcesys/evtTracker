@@ -287,7 +287,7 @@ class EventsListDialog(
 			event.SetEventObject(self.list)
 			self.list.ProcessEvent(event)
 
-	def onListItemSelected(self, event):
+	def onListItemSelected(self, event: wx.CommandEvent):
 		index = event.GetSelection()
 		nvdaEvent = self.eventHistory[index] if index >= 0 else None
 		if nvdaEvent:
