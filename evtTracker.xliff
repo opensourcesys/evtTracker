@@ -1,0 +1,283 @@
+<?xml version="1.0"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="en">
+<file id="readme.md" original="https://raw.githubusercontent.com/opensourcesys/evtTracker/3cc5655bd18f74c6f198dde96667c73d917c6a5a/readme.md">
+<skeleton>
+# $(ID:fcb56010-5e94-4cd4-8fe3-7ffdc7b1bacf)
+
+* $(ID:98594283-7e95-45c3-a1a9-dd7dbc3ae07f)
+
+$(ID:14e7c192-6307-4fbc-8fe2-5f0b675fbf7d)
+
+$(ID:ccaf65d9-da01-4c3f-9569-4e7929adb2d4)
+
+* $(ID:9c9ca1cb-5249-490a-98c5-d05a67124bb2)
+* $(ID:44d24574-de20-4e0b-bf25-2a0e503b314c)
+* $(ID:31112425-5610-428a-b469-85df6a44a68d)
+* $(ID:b5507eb3-7562-4946-8c50-3abe28d5194b)
+
+## $(ID:0b9a4c64-15ad-4ba6-875b-66491581c4f2)
+
+$(ID:214f0ca3-e2ae-4748-b203-22b58ab20eaa)
+
+* $(ID:f5c6f59a-5eb1-4951-bda6-306f22f5aacc)
+* $(ID:74d54072-abbd-4763-be91-a2c4026824f6)
+* $(ID:8afa31fb-13f5-4110-8c9d-93b82b635058)
+* $(ID:75b038f7-8e6d-4405-890d-c1ebb40d6f2b)
+
+$(ID:08111730-a40d-4740-b8d8-baca36599174)
+
+* $(ID:96b70308-f785-43f7-9922-5574e2a9704f)
+* $(ID:9f26c7d0-4c7a-4939-a1b1-7fe824b33752)
+* $(ID:7f585c6c-9684-4c82-8857-457fa846dca7)
+* $(ID:ece0aab2-b130-44fc-b26b-4d4e88cf266f)
+* $(ID:66b93376-2ef6-4712-a771-b4d599ba19cf)
+* $(ID:53524838-14c1-482b-a459-55c2f2acb5e6)
+* $(ID:81183c80-fbca-4172-b892-61c4ae72a759)
+* $(ID:ce186188-5500-4498-a707-6df906d9380d)
+
+$(ID:288fdd32-6365-4057-842f-3d5089fe29b0)
+
+$(ID:2d389820-a4c2-4ef6-b268-337605d8168e)
+
+$(ID:358af824-9811-4e25-8d96-a0ae947d48ce)
+
+$(ID:f1d1e94b-ecf3-4692-8f77-5905fa6f2523)
+
+</skeleton>
+<unit id="fcb56010-5e94-4cd4-8fe3-7ffdc7b1bacf">
+<notes>
+<note appliesTo="source">line: 2</note>
+<note appliesTo="source">prefix: # </note>
+</notes>
+<segment>
+<source>Event Tracker</source>
+</segment>
+</unit>
+<unit id="98594283-7e95-45c3-a1a9-dd7dbc3ae07f">
+<notes>
+<note appliesTo="source">line: 4</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Author: Joseph Lee, Thiago Seus</source>
+</segment>
+</unit>
+<unit id="14e7c192-6307-4fbc-8fe2-5f0b675fbf7d">
+<notes>
+<note appliesTo="source">line: 6</note>
+</notes>
+<segment>
+<source>This add-on outputs information about objects for which events were fired. Properties recorded in debug log mode include object type, name, role, event, app module, and accessibility API specific information such as accName for IAccessible object and Automation Id for UIA objects.</source>
+</segment>
+</unit>
+<unit id="ccaf65d9-da01-4c3f-9569-4e7929adb2d4">
+<notes>
+<note appliesTo="source">line: 8</note>
+</notes>
+<segment>
+<source>Notes:</source>
+</segment>
+</unit>
+<unit id="9c9ca1cb-5249-490a-98c5-d05a67124bb2">
+<notes>
+<note appliesTo="source">line: 10</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>This add-on is designed for developers and power users needing to track events coming from apps and various controls.</source>
+</segment>
+</unit>
+<unit id="44d24574-de20-4e0b-bf25-2a0e503b314c">
+<notes>
+<note appliesTo="source">line: 11</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>In order to use the add-on, NVDA must be logging in debug mode (configured from general settings (Privacy and Security in NVDA 2026.1 and later)/logging level, or restart with debug logging enabled).</source>
+</segment>
+</unit>
+<unit id="31112425-5610-428a-b469-85df6a44a68d">
+<notes>
+<note appliesTo="source">line: 12</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>It might be possible that add-ons loaded earlier than Event Tracker may not pass on the event to other add-ons, including Event Tracker. If this happens, Event Tracker will not be able to log events.</source>
+</segment>
+</unit>
+<unit id="b5507eb3-7562-4946-8c50-3abe28d5194b">
+<notes>
+<note appliesTo="source">line: 13</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Events are handled from global plugins, app modules, tree interceptors, and NVDA objects, in that order.</source>
+</segment>
+</unit>
+<unit id="0b9a4c64-15ad-4ba6-875b-66491581c4f2">
+<notes>
+<note appliesTo="source">line: 15</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Events and their information</source>
+</segment>
+</unit>
+<unit id="214f0ca3-e2ae-4748-b203-22b58ab20eaa">
+<notes>
+<note appliesTo="source">line: 17</note>
+</notes>
+<segment>
+<source>The following events are tracked and recorded:</source>
+</segment>
+</unit>
+<unit id="f5c6f59a-5eb1-4951-bda6-306f22f5aacc">
+<notes>
+<note appliesTo="source">line: 19</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Focus manipulation: gain focus, lose focus, focus entered, foreground</source>
+</segment>
+</unit>
+<unit id="74d54072-abbd-4763-be91-a2c4026824f6">
+<notes>
+<note appliesTo="source">line: 20</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Changes: name, value, state, description, live region</source>
+</segment>
+</unit>
+<unit id="8afa31fb-13f5-4110-8c9d-93b82b635058">
+<notes>
+<note appliesTo="source">line: 21</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Other events: alert</source>
+</segment>
+</unit>
+<unit id="75b038f7-8e6d-4405-890d-c1ebb40d6f2b">
+<notes>
+<note appliesTo="source">line: 22</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>UIA events: controller for, drag drop and drop target effects, element selected, item status, layout invalidated, notification, system alert, text change, tooltip open, window open</source>
+</segment>
+</unit>
+<unit id="08111730-a40d-4740-b8d8-baca36599174">
+<notes>
+<note appliesTo="source">line: 24</note>
+</notes>
+<segment>
+<source>For each event, the following information will be recorded:</source>
+</segment>
+</unit>
+<unit id="96b70308-f785-43f7-9922-5574e2a9704f">
+<notes>
+<note appliesTo="source">line: 26</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Event name</source>
+</segment>
+</unit>
+<unit id="9f26c7d0-4c7a-4939-a1b1-7fe824b33752">
+<notes>
+<note appliesTo="source">line: 27</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Object</source>
+</segment>
+</unit>
+<unit id="7f585c6c-9684-4c82-8857-457fa846dca7">
+<notes>
+<note appliesTo="source">line: 28</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Object name</source>
+</segment>
+</unit>
+<unit id="ece0aab2-b130-44fc-b26b-4d4e88cf266f">
+<notes>
+<note appliesTo="source">line: 29</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Object role</source>
+</segment>
+</unit>
+<unit id="66b93376-2ef6-4712-a771-b4d599ba19cf">
+<notes>
+<note appliesTo="source">line: 30</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Object value or state depending on events</source>
+</segment>
+</unit>
+<unit id="53524838-14c1-482b-a459-55c2f2acb5e6">
+<notes>
+<note appliesTo="source">line: 31</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>App module</source>
+</segment>
+</unit>
+<unit id="81183c80-fbca-4172-b892-61c4ae72a759">
+<notes>
+<note appliesTo="source">line: 32</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>For IAccessible objects: acc name, child ID</source>
+</segment>
+</unit>
+<unit id="ce186188-5500-4498-a707-6df906d9380d">
+<notes>
+<note appliesTo="source">line: 33</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>For UIA objects: Automation Id, class name, notification properties if recording notification event information, child count for layout invalidated event, properties for item status, drag drop, and drop target effect if defined</source>
+</segment>
+</unit>
+<unit id="288fdd32-6365-4057-842f-3d5089fe29b0">
+<notes>
+<note appliesTo="source">line: 35</note>
+</notes>
+<segment>
+<source>You can also assign a gesture to view the events on a list (NVDA menu/Preferences/Input gestures, Event Tracker category). The list saves up to 100 latest events processed prior to opening the dialog.</source>
+</segment>
+</unit>
+<unit id="2d389820-a4c2-4ef6-b268-337605d8168e">
+<notes>
+<note appliesTo="source">line: 37</note>
+</notes>
+<segment>
+<source>If you find this add-on useful, please [review it][1] in the NVDA Add-on Store. For a list of changes made between each add-on releases, refer to [changelogs for add-on releases][2] document.</source>
+</segment>
+</unit>
+<unit id="358af824-9811-4e25-8d96-a0ae947d48ce">
+<notes>
+<note appliesTo="source">line: 39</note>
+</notes>
+<segment>
+<source>[1]: https://github.com/nvaccess/addon-datastore/discussions/2717</source>
+</segment>
+</unit>
+<unit id="f1d1e94b-ecf3-4692-8f77-5905fa6f2523">
+<notes>
+<note appliesTo="source">line: 41</note>
+</notes>
+<segment>
+<source>[2]: https://github.com/opensourcesys/evtTracker/blob/master/changes.md</source>
+</segment>
+</unit>
+</file>
+</xliff>
