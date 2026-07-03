@@ -1,6 +1,6 @@
 # Olayİzleyici
 
-* Yazarlar: Joseph Lee, Thiago Seus
+* Yazar: Joseph Lee, Thiago Seu
 
 Bu eklenti, olayların tetiklendiği nesneler hakkında bilgi verir. Hata ayıklama günlük modunda kaydedilen özellikler, nesne türü, ad, rol, olay, uygulama modülü ve IAccessible nesnesi için accName ve UIA nesneleri için Otomasyon Kimliği gibi erişilebilirlik API'sine özgü bilgileri içerir.
 
@@ -26,7 +26,7 @@ Her olay için aşağıdaki bilgiler kaydedilecektir:
 * Nesne
 * Nesne adı
 * Nesne rolü
-* Olaylara bağlı olarak nesne değeri veya durumu
+* Nesne rolü ve durum bilgileri, daha yeni NVDA sürümlerinde bulunan geliştirici bilgilerine benzeyecektir
 * Uygulama modülü
 * IErişilebilir nesneler için: erişim adı, alt kimlik
 * UIA nesneleri için: Otomasyon Kimliği, sınıf adı, bildirim olay bilgisi kaydediliyorsa bildirim özellikleri, düzen geçersiz kılınan olay için çocuk sayısı, öğe durumu özellikleri, tanımlıysa sürükle bırak ve bırakma hedefi etkisi
@@ -36,3 +36,5 @@ Ayrıca, olayları bir listede görüntülemek için bir hareket de atayabilirsi
 Bu eklentiyi yararlı buluyorsanız, lütfen NVDA Eklenti Mağazasında [inceleyin][1].
 
 [1]: https://github.com/nvaccess/addon-datastore/discussions/2717
+
+[2]: https://github.com/opensourcesys/evtTracker/blob/master/changes.md
