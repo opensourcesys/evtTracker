@@ -33,6 +33,8 @@
 
 您还可以指定一个手势以在列表中查看事件（NVDA 菜单选项/按键与手势，事件跟踪器类别）。该列表最多保存 100 个已处理的最新事件。
 
-If you find this add-on useful, please [review it][1] in the NVDA Add-on Store.
+If you find this add-on useful, please [review it][1] in the NVDA Add-on Store. For a list of changes made between each add-on releases, refer to [changelogs for add-on releases][2] document.
 
 [1]: https://github.com/nvaccess/addon-datastore/discussions/2717
+
+[2]: https://github.com/opensourcesys/evtTracker/blob/master/changes.md

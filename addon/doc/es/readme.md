@@ -33,6 +33,8 @@ Se registra la siguiente información de cada evento:
 
 También se puede asignar un gesto para visualizar los eventos en una lista (menú NVDA / Preferencias / Gestos de entrada, categoría Rastreador de eventos). La lista guarda hasta los 100 últimos eventos procesados.
 
-Si encuentras útil este complemento, [reséñalo][1] en la tienda de complementos de NVDA.
+If you find this add-on useful, please [review it][1] in the NVDA Add-on Store. For a list of changes made between each add-on releases, refer to [changelogs for add-on releases][2] document.
 
 [1]: https://github.com/nvaccess/addon-datastore/discussions/2717
+
+[2]: https://github.com/opensourcesys/evtTracker/blob/master/changes.md

@@ -33,6 +33,8 @@ Pour chaque événement, les informations suivantes sont enregistrées :
 
 Vous pouvez également assigner un geste pour afficher les événements d'une liste (menu NVDA / Préférences / Gestes de commandes, catégorie  Event Tracker). la liste sauvegarde jusqu'à 100 derniers événements traités.
 
-Si vous trouvez cette extension utile, veuillez laisser un [avis (review)][1] dans l'Add-on Store de NVDA.
+If you find this add-on useful, please [review it][1] in the NVDA Add-on Store. For a list of changes made between each add-on releases, refer to [changelogs for add-on releases][2] document.
 
 [1]: https://github.com/nvaccess/addon-datastore/discussions/2717
+
+[2]: https://github.com/opensourcesys/evtTracker/blob/master/changes.md

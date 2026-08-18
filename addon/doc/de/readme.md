@@ -33,6 +33,8 @@ Für jedes Event werden folgende Informationen protokolliert:
 
 Sie können auch einen Tastenbefehl zuweisen, um die Ereignisse in einer Liste anzuzeigen (NVDA-Menü/Einstellungen/Tastenbefehle, Kategorie "Ereignis-Tracker"). Die Liste speichert bis zu 100 zuletzt verarbeitete Ereignisse.
 
-If you find this add-on useful, please [review it][1] in the NVDA Add-on Store.
+If you find this add-on useful, please [review it][1] in the NVDA Add-on Store. For a list of changes made between each add-on releases, refer to [changelogs for add-on releases][2] document.
 
 [1]: https://github.com/nvaccess/addon-datastore/discussions/2717
+
+[2]: https://github.com/opensourcesys/evtTracker/blob/master/changes.md

@@ -33,6 +33,8 @@ Za svaki događaj zabilježit će se sljedeće informacije:
 
 Možeš dodijeliti i gestu za pregled događaja na popisu (NVDA izbornik/Postavke/Geste unosa, kategorija „Praćenje događaja”). Popis sprema do 100 najnovijih obrađenih događaja.
 
-If you find this add-on useful, please [review it][1] in the NVDA Add-on Store.
+If you find this add-on useful, please [review it][1] in the NVDA Add-on Store. For a list of changes made between each add-on releases, refer to [changelogs for add-on releases][2] document.
 
 [1]: https://github.com/nvaccess/addon-datastore/discussions/2717
+
+[2]: https://github.com/opensourcesys/evtTracker/blob/master/changes.md
