@@ -7,7 +7,7 @@ Diese Erweiterung gibt Informationen zu Objekten aus, für die Ereignisse ausgel
 Anmerkungen:
 
 * Diese Erweiterung wurde für Entwickler und Power-User entwickelt, die Ereignisse verfolgen müssen, die von Apps und verschiedenen Steuerelementen stammen.
-* Um die Erweiterung verwenden zu können, muss sich NVDA im Debug-Modus befinden (konfiguriert über das NVDA-Menü, Optionen, Einstellungen, Allgemein und dort Protokollierungsstufen oder Neustart mit aktivierter Debug-Protokollierung).
+* In order to use the add-on, NVDA must be logging in debug mode (configured from privacy and security /logging level, or restart with debug logging enabled).
 * Es ist möglich, dass Erweiterungen, die früher als Event-Tracker geladen wurden, das Ereignis möglicherweise nicht an andere Erweiterungen weitergeben, einschließlich Event-Tracker. In diesem Fall kann Event-Tracker keine Ereignisse protokollieren.
 * Ereignisse werden von globalen Plugins, App-Modulen, Baum-Interceptors und NVDA-Objekten in dieser Reihenfolge verarbeitet.
 

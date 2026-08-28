@@ -7,7 +7,7 @@ Cette extension affiche des informations sur les objets pour lesquels des évén
 Notes :
 
 * Cette extension est conçue pour les développeurs et les utilisateurs expérimentés qui ont besoin de suivre des événements provenant d'applis et divers contrôles.
-* Pour utiliser l'extension, NVDA doit se connecter en mode débogage (configuré à partir des paramètres généraux/niveau de journalisation, ou redémarrer avec le journal activé en mode débogage).
+* In order to use the add-on, NVDA must be logging in debug mode (configured from privacy and security /logging level, or restart with debug logging enabled).
 * Il est possible que les extensions chargées avant Event Tracker ne communiquent pas l'événement à d'autres extensions, y compris Event Tracker. Si c'est le cas, Event Tracker ne sera pas en mesure d'enregistrer les événements.
 * Les événements sont gérés dans l'ordre par les modules globaux, modules applicatifs, les intercepteurs d'arborescence et les objets NVDA.
 

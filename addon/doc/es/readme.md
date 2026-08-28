@@ -7,7 +7,7 @@ Este complemento emite información sobre objetos en los que se han disparado ev
 Notas:
 
 * Este complemento está pensado para desarrolladores y usuarios avanzados que necesitan rastrear eventos procedentes de aplicaciones y diversos controles.
-* Para usar el complemento, NVDA debe tener el registro en modo depuración (configurado desde Opciones generales / Nivel de registro, o reiniciado con el registro de depuración habilitado).
+* In order to use the add-on, NVDA must be logging in debug mode (configured from privacy and security /logging level, or restart with debug logging enabled).
 * Podría ser posible que los complementos cargados antes que el reastreador de eventos no pasen el evento a otros complementos, incluido el rastreador de eventos. Si esto sucede, el rastreador de eventos no será capaz de registrar eventos.
 * Los eventos se manejan desde las extensiones globales, módulos de aplicación, interceptores de árbol y objetos de NVDA, en ese orden.
 

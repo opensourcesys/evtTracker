@@ -7,7 +7,7 @@
 注意：
 
 * 此插件专为需要跟踪来自应用程序和各种控件事件的开发者和高级用户而设计。
-* 为了使用此插件，NVDA 必须在调试模式下进行日志记录（从常规设置/日志记录级别进行配置，或在启用调试日志记录的情况下重新启动）。
+* In order to use the add-on, NVDA must be logging in debug mode (configured from privacy and security /logging level, or restart with debug logging enabled).
 * 在 Event Tracker 之前运行的插件可能无法将事件传递给其他插件，包括 Event Tracker。如果发生这种情况，事件跟踪器将无法记录事件。
 * 事件按顺序从全局插件、应用程序模块、树拦截器和 NVDA 对象处理。
 

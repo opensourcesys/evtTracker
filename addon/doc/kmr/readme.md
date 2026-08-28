@@ -7,7 +7,7 @@ Ev pêvek agahdariyan li ser tiştên ku bûyer ji bo wan hatine çalakirin derd
 Têbînî:
 
 * Ev pêvek ji bo pêşdebir û bikarhênerên pispor ên ku hewce ne ku bûyerên ji sepan û kontrolên cûrbecûr têne bişopînin hatî çêkirin.
-* Ji bo bikaranîna pêvekê, divê NVDA di moda debugkirinê de be (ku ji mîhengên giştî (Nepenî û Ewlehî di NVDA 2026.1 û paşê de)/asta têketinê hatiye mîhengkirin, an jî bi çalakkirina têketina debugkirinê ji nû ve dest pê bike).
+* In order to use the add-on, NVDA must be logging in debug mode (configured from privacy and security /logging level, or restart with debug logging enabled).
 * Dibe ku pêvekên ku berî Event Tracker hatine barkirin, bûyer neguhêzin pêvekên din, tevî Event Tracker. Ger ev biqewime, Event Tracker dê nikaribe bûyeran tomar bike.
 * Bûyer bi vî rêzî ji pêvekên gerdûnî, modulên sepanê, girtina daran, û objeyên NVDA têne birêvebirin.
 

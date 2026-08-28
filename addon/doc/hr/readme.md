@@ -7,7 +7,7 @@ Ovaj dodatak daje informacije o objektima za koje su pokrenuti događaji. Svojst
 Zabilješke:
 
 * Ovaj je dodatak dizajniran za programere i napredne korisnike koji trebaju mogućnost praćenja događaja koji dolaze iz aplikacija i raznih kontrola.
-* Za korištenje dodatka, NVDA mora biti prijavljivanje u načinu ispravljanja grešaka (konfigurirano u općim postavkama / razini prijave ili s ponovnim pokretnjem s aktiviranim zapisivanjem ispravljanja grešaka).
+* In order to use the add-on, NVDA must be logging in debug mode (configured from privacy and security /logging level, or restart with debug logging enabled).
 * Moguće je da dodaci koji su učitani prije dodatka „Praćenja događaja” ne proslijede događaj drugim dodacima, uključujući dodatak „Praćenje događaja”. Ako se to dogodi, dodatak „Praćenje događaja” neće moći zabilježiti događaje.
 * Događajima se upravlja iz globalnih dodataka, modula aplikacija, presretača stabla i NVDA objekata, tim redoslijedom.
 

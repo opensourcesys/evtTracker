@@ -7,7 +7,7 @@ Ten dodatek wyświetla informacje o obiektach, dla których zdarzenia zostały u
 Uwagi:
 
 * Ten dodatek jest przeznaczony dla deweloperów i zaawansowanych użytkowników, którzy muszą śledzić zdarzenia pochodzące z aplikacji i różnych kontrolek.
-* Aby korzystać z dodatku, NVDA musi logować się w trybie debugowania (skonfigurowanym z poziomu ustawień ogólnych/rejestrowania lub ponownie uruchomić z włączonym rejestrowaniem debugowania).
+* In order to use the add-on, NVDA must be logging in debug mode (configured from privacy and security /logging level, or restart with debug logging enabled).
 * Możliwe, że dodatki załadowane wcześniej niż Event Tracker mogą nie przekazać zdarzenia innym dodatkom, w tym Event Tracker. Jeśli tak się stanie, Moduł śledzenia zdarzeń nie będzie mógł rejestrować zdarzeń.
 * Zdarzenia są obsługiwane z globalnych wtyczek, modułów aplikacji, przechwytywaczy drzew i obiektów NVDA w tej kolejności.
 

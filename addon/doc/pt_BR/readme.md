@@ -7,7 +7,7 @@ Esse complemento gera informações sobre objetos para os quais os eventos foram
 Notas:
 
 * Esse complemento foi projetado para desenvolvedores e usuários avançados que precisam rastrear eventos provenientes de aplicativos e vários controles.
-* Para usar o complemento, o NVDA deve estar registrando em modo de depuração (configurado nas configurações gerais/nível de registro ou reiniciar com o registro de depuração ativado).
+* In order to use the add-on, NVDA must be logging in debug mode (configured from privacy and security /logging level, or restart with debug logging enabled).
 * Pode ser possível que os complementos carregados antes do Event Tracker não transmitam o evento para outros complementos, inclusive o Event Tracker. Se isso acontecer, o Event Tracker não conseguirá registrar os eventos.
 * Os eventos são tratados a partir de plug-ins globais, módulos de aplicativos, interceptores de árvore e objetos NVDA, nessa ordem.
 
