@@ -3,51 +3,51 @@ msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
 "POT-Creation-Date: 2026-06-26 08:33+0000\n"
-"PO-Revision-Date: 2026-08-27 06:02\n"
+"PO-Revision-Date: 2026-08-28 06:29\n"
 "Last-Translator: \n"
-"Language-Team: Finnish\n"
-"Language: fi_FI\n"
+"Language-Team: Kurmanji (Kurdish)\n"
+"Language: kmr_TR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Crowdin-Project: nvdaaddons\n"
 "X-Crowdin-Project-ID: 780748\n"
-"X-Crowdin-Language: fi\n"
+"X-Crowdin-Language: kmr\n"
 "X-Crowdin-File: evtTracker.pot\n"
 "X-Crowdin-File-ID: 438\n"
 
 #. Translators: input help message for a command in Event Tracker add-on.
 #: addon\globalPlugins\evtTracker.py:227
 msgid "Shows the list of processed events"
-msgstr "Näyttää luettelon käsitellyistä tapahtumista"
+msgstr "Lîsteya bûyerên pêvajoyî nîşan dide"
 
 #. Translators: title of a dialog displaying recent events.
 #: addon\globalPlugins\evtTracker.py:250
 msgid "Events List"
-msgstr "Tapahtumaluettelo"
+msgstr "Lîsteya Bûyeran"
 
 #. Translators: label for a read-only edit field displaying event properties.
 #: addon\globalPlugins\evtTracker.py:266
 msgid "Event &description"
-msgstr "Tapahtuman &kuvaus"
+msgstr "&Danasîna Bûyerê"
 
 #. Add-on summary/title, usually the user visible name of the add-on
 #. Translators: Summary/title for this add-on
 #. to be shown on installation and add-on information found in add-on store
 #: buildVars.py:21
 msgid "Event Tracker"
-msgstr "Tapahtumienseuranta"
+msgstr "Şopînerê Bûyeran"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-on store
 #: buildVars.py:24
 msgid "Tracks events and displays information about them"
-msgstr "Seuraa tapahtumia ja näyttää niiden tiedot"
+msgstr "Bûyeran dişopîne û agahdariya li ser wan nîşan dide"
 
 #. Brief changelog for this version
 #. Translators: what's new content for the add-on version to be shown in the add-on store
 #: buildVars.py:29
 msgid "* Removed add-on changelog from add-on help (readme) file."
-msgstr ""
+msgstr "* Guhertinên lêzêdekirinê ji pelê alîkariya lêzêdekirinê (readme) hat rakirin."
 
