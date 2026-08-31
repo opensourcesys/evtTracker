@@ -2,6 +2,10 @@
 
 This page lists the complete changelog for Event Tracker add-on releases.
 
+## Version 26.4.0
+
+* NVDA 2026.1 (64-bit) or later is required.
+
 ## Version 26.3.0
 
 * Removed add-on changelog from add-on help (readme) file.
