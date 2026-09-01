@@ -17,6 +17,7 @@ from NVDAObjects import NVDAObject
 from scriptHandler import script
 import inputCore
 import wx
+import ui
 
 
 # Security: disable the global plugin altogether in secure mode.
@@ -258,6 +259,7 @@ class EventsListDialog(
 			style=wx.LB_SINGLE
 		)
 		self.list.Bind(wx.EVT_LISTBOX, self.onListItemSelected)
+		self.list.Bind(wx.EVT_LISTBOX_DCLICK, self.onListItemDClick)
 		contentsSizer.Add(self.list, flag=wx.EXPAND)
 		contentsSizer.AddSpacer(gui.guiHelper.SPACE_BETWEEN_VERTICAL_DIALOG_ITEMS)
 		self.description = gui.guiHelper.LabeledControlHelper(
@@ -292,3 +294,9 @@ class EventsListDialog(
 		nvdaEvent = self.eventHistory[index] if index >= 0 else None
 		if nvdaEvent:
 			self.description.control.Value = "\n".join(nvdaEvent.info)
+
+	def onListItemDClick(self, event):
+		index = event.GetSelection()
+		nvdaEvent = self.eventHistory[index] if index >= 0 else None
+		if nvdaEvent:
+			ui.browseableMessage("\n".join(nvdaEvent.info), nvdaEvent.type)
