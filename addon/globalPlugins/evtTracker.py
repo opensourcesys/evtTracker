@@ -44,7 +44,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			event: str | None = None,
 			additionalInfo: str | None = None
 	) -> None:
-		info: list[str] = [f"object: {repr(obj)}"]
+		# Apart from object identifier (below), others must be kept the same as NVDA Core (thus Ruff noqa).
+		info: list[str] = [f"object: {obj!r}"]
 		info.append(f"name: {obj.name}")
 		# Use a friendly name for role (credit: NV Access).
 		info.append("role: %s" % obj.role.name)
