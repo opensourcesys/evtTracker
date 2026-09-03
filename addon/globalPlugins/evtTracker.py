@@ -48,7 +48,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		info: list[str] = [f"object: {obj!r}"]
 		info.append(f"name: {obj.name}")
 		# Use a friendly name for role (credit: NV Access).
-		info.append("role: %s" % obj.role.name)
+		info.append("role: %s" % obj.role.name)  # noqa
 		if not event:
 			event = "no event specified"
 		info.append(f"event: {event}")
@@ -58,26 +58,26 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# Parts copied from NVDA Core's default navigator object dev info's state retriever (credit: NV Access).
 			try:
 				ret = ", ".join(str(state) for state in obj.states)
-			except Exception as e:
-				ret = "exception: %s" % e
-			info.append("states: %s" % ret)
+			except Exception as e:  # noqa
+				ret = "exception: %s" % e  # noqa
+			info.append("states: %s" % ret)  #noqa
 		info.append(f"app module: {obj.appModule}")
 		# Some objects do not define window class name such as secure desktop object.
 		try:
 			ret = obj.windowClassName
-		except Exception as e:
-			ret = "exception: %s" % e
-		info.append("window class name: %s" % ret)
+		except Exception as e:  # noqa
+			ret = "exception: %s" % e  # noqa
+		info.append("window class name: %s" % ret)  # noqa
 		if isinstance(obj, IAccessible):
 			# Bulk comes from dev info for IAccessible object (credit: NV Access).
 			IAccessibleObject = obj.IAccessibleObject
 			childID = obj.IAccessibleChildID
 			try:
 				ret = obj._formatLongDevInfoString(IAccessibleObject.accName(childID))
-			except Exception as e:
-				ret = "exception: %s" % e
-			info.append("IAccessible accName: %s" % ret)
-			info.append("IAccessibleChildID: %r" % childID)
+			except Exception as e:  # noqa
+				ret = "exception: %s" % e  # noqa
+			info.append("IAccessible accName: %s" % ret)  # noqa
+			info.append("IAccessibleChildID: %r" % childID)  # noqa
 		elif isinstance(obj, UIA):
 			element = obj.UIAElement
 			# Sometimes due to timing errors, COM error is thrown
