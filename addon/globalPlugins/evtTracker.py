@@ -24,7 +24,7 @@ def disableInSecureMode(cls):
 	return globalPluginHandler.GlobalPlugin if globalVars.appArgs.secure else cls
 
 
-class Event(object):
+class Event:
 	def __init__(self, type: str, info: list[str]) -> None:
 		super().__init__()
 		self.type = type
