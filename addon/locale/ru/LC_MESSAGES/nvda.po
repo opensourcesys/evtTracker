@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2026-06-26 08:33+0000\n"
-"PO-Revision-Date: 2026-08-28 17:07\n"
+"POT-Creation-Date: 2026-09-04 09:23+0000\n"
+"PO-Revision-Date: 2026-09-04 09:25\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
@@ -18,17 +18,17 @@ msgstr ""
 "X-Crowdin-File-ID: 438\n"
 
 #. Translators: input help message for a command in Event Tracker add-on.
-#: addon\globalPlugins\evtTracker.py:227
+#: addon\globalPlugins\evtTracker.py:228
 msgid "Shows the list of processed events"
 msgstr "Показывает список обработанных событий"
 
 #. Translators: title of a dialog displaying recent events.
-#: addon\globalPlugins\evtTracker.py:250
+#: addon\globalPlugins\evtTracker.py:251
 msgid "Events List"
 msgstr "Список Событий"
 
 #. Translators: label for a read-only edit field displaying event properties.
-#: addon\globalPlugins\evtTracker.py:266
+#: addon\globalPlugins\evtTracker.py:267
 msgid "Event &description"
 msgstr "&Описание события"
 
@@ -48,6 +48,6 @@ msgstr "Отслеживает события и отображает инфор
 #. Brief changelog for this version
 #. Translators: what's new content for the add-on version to be shown in the add-on store
 #: buildVars.py:29
-msgid "* Removed add-on changelog from add-on help (readme) file."
-msgstr "* Удалён журнал изменений дополнения из файла справки дополнения (readme)."
+msgid "* NVDA 2026.1 (64-bit) or later is required."
+msgstr ""
 

@@ -7,7 +7,7 @@ Bu eklenti, olayların tetiklendiği nesneler hakkında bilgi verir. Hata ayıkl
 Notlar:
 
 * Bu eklenti, uygulamalardan ve çeşitli denetimlerden gelen olayları izlemesi gereken geliştiriciler ve uzman kullanıcılar için tasarlanmıştır.
-* In order to use the add-on, NVDA must be logging in debug mode (configured from privacy and security /logging level, or restart with debug logging enabled).
+* Eklentiyi kullanabilmek için NVDA'nın hata ayıklama modunda günlük kaydı tutması gerekir (gizlilik ve güvenlik/günlük kaydı düzeyi bölümünden yapılandırılır veya hata ayıklama günlük kaydı etkinleştirilerek yeniden başlatılır).
 * Olay İzleyicisi'nden önce yüklenen eklentilerin, olayı Olay İzleyicisi de dahil olmak üzere diğer eklentilere aktarmaması mümkün olabilir. Bu durumda, Olay İzleyici olayları günlüğe kaydedemez.
 * Olaylar, bu sırayla global eklentiler, uygulama modülleri, ağaç önleyiciler ve NVDA nesnelerinden işlenir.
 
