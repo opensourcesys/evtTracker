@@ -21,7 +21,7 @@ addon_info = AddonInfo(
 	addon_summary=_("Event Tracker"),
 	# Add-on description
 	# Translators: Long description to be shown for this add-on on add-on information from add-on store
-	addon_description=_("""Tracks events and displays information about them"""),
+	addon_description=_("""Tracks events and displays information about them (for developers and power users)"""),
 	# version
 	addon_version="26.4",
 	# Brief changelog for this version
