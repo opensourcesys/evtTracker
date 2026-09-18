@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2026-09-04 09:23+0000\n"
-"PO-Revision-Date: 2026-09-11 06:56\n"
+"POT-Creation-Date: 2026-09-15 19:14+0000\n"
+"PO-Revision-Date: 2026-09-16 17:46\n"
 "Last-Translator: \n"
 "Language-Team: Turkish\n"
 "Language: tr_TR\n"
@@ -42,8 +42,8 @@ msgstr "Olay İzleyici"
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-on store
 #: buildVars.py:24
-msgid "Tracks events and displays information about them"
-msgstr "Olayları izler ve bunlarla ilgili bilgileri görüntüler"
+msgid "Tracks events and displays information about them (for developers and power users)"
+msgstr "Olayları takip eder ve bunlarla ilgili bilgileri görüntüler (geliştiriciler ve ileri düzey kullanıcılar için)."
 
 #. Brief changelog for this version
 #. Translators: what's new content for the add-on version to be shown in the add-on store
