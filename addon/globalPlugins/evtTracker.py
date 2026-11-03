@@ -269,7 +269,7 @@ class EventsListDialog(
 			style=wx.TE_MULTILINE | wx.TE_READONLY | wx.TE_DONTWRAP
 		)
 		self.description.sizer.SetOrientation(wx.VERTICAL)
-		self.description.sizer.GetItem(1).SetMinSize(0, 3)
+		self.description.sizer.GetItem(1).SetMinSize(0, gui.guiHelper.SPACE_BETWEEN_ASSOCIATED_CONTROL_VERTICAL)
 		self.description.sizer.GetItem(self.description.control).SetProportion(1)
 		self.description.sizer.GetItem(self.description.control).SetFlag(wx.EXPAND)
 		contentsSizer.Add(self.description.sizer, proportion=1, flag=wx.EXPAND)
