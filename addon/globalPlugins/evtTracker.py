@@ -6,7 +6,7 @@ from comtypes import COMError
 from collections import deque
 from collections.abc import Callable
 from gui.dpiScalingHelper import DpiScalingHelperMixinWithoutInit
-import gui
+import gui.guiHelper
 import globalPluginHandler
 import globalVars
 import api
@@ -254,11 +254,11 @@ class EventsListDialog(
 		contentsSizer = wx.BoxSizer(wx.VERTICAL)
 		self.list = wx.ListBox(
 			self,
-			size=self.scaleSize((500, 300)),  # height is chosen to ensure the dialog will fit on an 800x600 screen,
+			size=self.scaleSize((500, 250)),  # height is chosen to ensure the dialog will fit on an 800x600 screen,
 			style=wx.LB_SINGLE
 		)
 		self.list.Bind(wx.EVT_LISTBOX, self.onListItemSelected)
-		contentsSizer.Add(self.list, flag=wx.EXPAND)
+		contentsSizer.Add(self.list, proportion=2, flag=wx.EXPAND)
 		contentsSizer.AddSpacer(gui.guiHelper.SPACE_BETWEEN_VERTICAL_DIALOG_ITEMS)
 		self.description = gui.guiHelper.LabeledControlHelper(
 			self,
@@ -267,7 +267,11 @@ class EventsListDialog(
 			wx.TextCtrl,
 			style=wx.TE_MULTILINE | wx.TE_READONLY | wx.TE_DONTWRAP
 		)
-		contentsSizer.Add(self.description.sizer)
+		self.description.sizer.SetOrientation(wx.VERTICAL)
+		self.description.sizer.GetItem(1).SetMinSize(0, gui.guiHelper.SPACE_BETWEEN_ASSOCIATED_CONTROL_VERTICAL)
+		self.description.sizer.GetItem(self.description.control).SetProportion(1)
+		self.description.sizer.GetItem(self.description.control).SetFlag(wx.EXPAND)
+		contentsSizer.Add(self.description.sizer, proportion=1, flag=wx.EXPAND)
 
 		mainSizer.Add(contentsSizer, border=gui.guiHelper.BORDER_FOR_DIALOGS, flag=wx.ALL)
 		mainSizer.Fit(self)
