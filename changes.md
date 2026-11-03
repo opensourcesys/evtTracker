@@ -2,6 +2,10 @@
 
 This page lists the complete changelog for Event Tracker add-on releases.
 
+## Version 26.5.1
+
+* Improved visual presentation of events list by adjusting the size of event description content (contributed by hwf1324).
+
 ## Version 26.5.0
 
 * NVDA 2026.3 or later is required.
