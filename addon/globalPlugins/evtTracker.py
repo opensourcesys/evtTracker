@@ -6,7 +6,7 @@ from comtypes import COMError
 from collections import deque
 from collections.abc import Callable
 from gui.dpiScalingHelper import DpiScalingHelperMixinWithoutInit
-import gui
+import gui.guiHelper
 import globalPluginHandler
 import globalVars
 import api
@@ -268,7 +268,9 @@ class EventsListDialog(
 			wx.TextCtrl,
 			style=wx.TE_MULTILINE | wx.TE_READONLY | wx.TE_DONTWRAP
 		)
-		contentsSizer.Add(self.description.sizer)
+		self.description.sizer.GetItem(self.description.control).SetProportion(1)
+		self.description.sizer.GetItem(self.description.control).SetFlag(wx.EXPAND)
+		contentsSizer.Add(self.description.sizer, flag=wx.EXPAND)
 
 		mainSizer.Add(contentsSizer, border=gui.guiHelper.BORDER_FOR_DIALOGS, flag=wx.ALL)
 		mainSizer.Fit(self)
