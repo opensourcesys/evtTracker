@@ -277,6 +277,7 @@ class EventsListDialog(
 		mainSizer.Add(contentsSizer, border=gui.guiHelper.BORDER_FOR_DIALOGS, flag=wx.ALL)
 		mainSizer.Fit(self)
 		self.SetSizer(mainSizer)
+		self.Bind(wx.EVT_CHAR_HOOK, self.onCancel)
 		self.CentreOnScreen()
 		self._createEventsList()
 
@@ -297,3 +298,8 @@ class EventsListDialog(
 		nvdaEvent = self.eventHistory[index] if index >= 0 else None
 		if nvdaEvent:
 			self.description.control.Value = "\n".join(nvdaEvent.info)
+
+	def onCancel(self, event: wx.KeyEvent) -> None:
+		if event.GetKeyCode() == wx.WXK_ESCAPE:
+			self.EndModal(wx.CANCEL)
+		event.Skip()
