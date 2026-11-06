@@ -26,7 +26,8 @@ addon_info = AddonInfo(
 	addon_version="26.3.8",
 	# Brief changelog for this version
 	# Translators: what's new content for the add-on version to be shown in the add-on store
-	addon_changelog=_("""* Removed add-on changelog from add-on help (readme) file."""),
+	addon_changelog=_("""* Improved visual presentation of events list by adjusting the size of event description content (contributed by hwf1324).
+* Pressing Escape from events list will close it (contributed by hwf1324)."""),
 	# Author(s)
 	addon_author="Joseph Lee <joseph.lee22590@gmail.com>, Luke Davis <XLTechie@newanswertech.com>, Thiago Seus <thiago.seus@yahoo.com.br>",
 	# URL for the add-on documentation support
