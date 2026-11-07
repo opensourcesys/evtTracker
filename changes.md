@@ -2,7 +2,7 @@
 
 This page lists the complete changelog for Event Tracker add-on releases.
 
-## Version 26.5.1
+## Version 26.5.1/26.3.9
 
 * Improved visual presentation of events list by adjusting the size of event description content (contributed by hwf1324).
 * Pressing Escape from events list will close it (contributed by hwf1324).
