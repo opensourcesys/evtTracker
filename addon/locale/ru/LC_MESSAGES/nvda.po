@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2026-11-02 04:50+0000\n"
-"PO-Revision-Date: 2026-11-02 04:52\n"
+"POT-Creation-Date: 2026-11-06 15:44+0000\n"
+"PO-Revision-Date: 2026-11-08 11:27\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
@@ -48,6 +48,10 @@ msgstr "Отслеживает события и отображает инфор
 #. Brief changelog for this version
 #. Translators: what's new content for the add-on version to be shown in the add-on store
 #: buildVars.py:29
-msgid "* NVDA 2026.3 or later is required."
-msgstr "* Требуется NVDA 2026.3 или выше."
+msgid "* NVDA 2026.3 or later is required.\n"
+"* Improved visual presentation of events list by adjusting the size of event description content (contributed by hwf1324).\n"
+"* Pressing Escape from events list will close it (contributed by hwf1324)."
+msgstr "* Требуется NVDA 2026.3 или выше.\n"
+"* Улучшено визуальное представление списка событий за счёт исправления размера содержимого описания события (предложение от hwf1324).\n"
+"* Нажатие Escape при просмотре списка событий закроет его (предложение от hwf1324)."
 
