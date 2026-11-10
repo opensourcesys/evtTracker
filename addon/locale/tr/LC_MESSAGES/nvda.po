@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2026-10-19 03:35+0000\n"
-"PO-Revision-Date: 2026-10-27 08:22\n"
+"POT-Creation-Date: 2026-11-06 15:44+0000\n"
+"PO-Revision-Date: 2026-11-09 09:07\n"
 "Last-Translator: \n"
 "Language-Team: Turkish\n"
 "Language: tr_TR\n"
@@ -48,6 +48,8 @@ msgstr "Olayları takip eder ve bunlarla ilgili bilgileri görüntüler (gelişt
 #. Brief changelog for this version
 #. Translators: what's new content for the add-on version to be shown in the add-on store
 #: buildVars.py:29
-msgid "* Removed add-on changelog from add-on help (readme) file."
-msgstr "* Eklenti yardım (readme) dosyasından eklenti değişiklik günlüğü kaldırıldı."
+msgid "* Improved visual presentation of events list by adjusting the size of event description content (contributed by hwf1324).\n"
+"* Pressing Escape from events list will close it (contributed by hwf1324)."
+msgstr "* Olay listesinin görsel sunumu, Olay açıklaması içeriğinin boyutunun ayarlanmasıyla iyileştirildi (hwf1324 tarafından katkıda bulunuldu).\n"
+"* Olay listesindeyken Escape tuşuna basmak listeyi kapatır (hwf1324 tarafından katkıda bulunulmuştur)."
 
